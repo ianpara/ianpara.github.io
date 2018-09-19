@@ -2437,17 +2437,16 @@ input, select, textarea {
 		dl dt {
 			display: block;
 			font-weight: 400;
-			margin: 0 0 1em 0;
 		}
 
 		dl dd {
-			margin-left: 2em;
+			margin-left: 3em;
 		}
 
 		dl.alt dt {
 			display: block;
-			width: 3em;
-			margin: 0;
+			width: 10em;
+			margin: 0px;
 			clear: left;
 			float: left;
 		}
@@ -2591,23 +2590,7 @@ input, select, textarea {
 						}
 
 		}
-
-/* Icons */
-
-	ul.icons {
-		cursor: default;
-		list-style: none;
-		padding-left: 0;
-	}
-
-		ul.icons li {
-			display: inline-block;
-			padding: 0 0.65em 0 0;
-		}
-
-			ul.icons li:last-child {
-				padding-right: 0 !important;
-			}
+	
 
 /* Section/Article */
 
@@ -3535,84 +3518,17 @@ input, select, textarea {
 
 /* Footer */
 
-	#footer {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		padding: 5em 5em 3em 5em ;
-		width: calc(100% + 2em);
-		margin: 0 0 3em -2em;
-	}
 
-		#footer > * {
-			width: calc(50% - 2em);
-			margin-left: 2em;
-		}
+    .footer-list-item {
+      list-style-type: none;
+      display: inline-block;
+    }
 
-		#footer .copyright {
-			width: 100%;
-			margin: 2.5em 0 2em 0;
-			font-size: 0.8em;
-			text-align: center;
-		}
+    .footer-list {
+      padding: 50px 0;
+      text-align: center;
+    }
 
-		@media screen and (max-width: 1280px) {
-
-			#footer {
-				padding: 4em 4em 2em 4em ;
-			}
-
-		}
-
-		@media screen and (max-width: 980px) {
-
-			#footer {
-				padding: 4em 3em 2em 3em ;
-				display: block;
-				margin: 0 0 3em 0;
-				width: 100%;
-			}
-
-				#footer > * {
-					width: 100%;
-					margin-left: 0;
-					margin-bottom: 3em;
-				}
-
-				#footer .copyright {
-					text-align: left;
-				}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			#footer {
-				padding: 3em 2em 1em 2em ;
-			}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			#footer {
-				padding: 3em 1.5em 1em 1.5em ;
-			}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			#footer {
-				padding: 2.5em 1em 0.5em 1em ;
-			}
-
-		}
 
 /* Wrapper */
 
