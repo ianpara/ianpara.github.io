@@ -8,7 +8,7 @@
 
 	var	$window = $(window),
 		$body = $('body'),
-		$main = $('#main');
+		$main = $('#site');
 
 	// Breakpoints.
 		breakpoints({
@@ -24,18 +24,6 @@
 		var $nav = $('#nav');
 
 		if ($nav.length > 0) {
-
-			// Shrink effect.
-				$main
-					.scrollex({
-						mode: 'top',
-						enter: function() {
-							$nav.addClass('alt');
-						},
-						leave: function() {
-							$nav.removeClass('alt');
-						},
-					});
 
 			// Links.
 				var $nav_a = $nav.find('a');
