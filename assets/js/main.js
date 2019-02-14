@@ -31,7 +31,7 @@
 				$nav_a
 					.scrolly({
 						speed: 1000,
-						offset: function() { return $nav.height(); }
+						offset: 60,
 					})
 					.on('click', function() {
 
@@ -65,6 +65,7 @@
 						// Scrollex.
 							$section.scrollex({
 								mode: 'middle',
+								top: '150',
 								initialize: function() {
 
 									// Deactivate section.

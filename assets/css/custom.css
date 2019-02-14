@@ -1,10 +1,10 @@
-@import url(font-awesome.min.css);
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400";
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 /*Font*/
 body {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 17pt;
+  font-size: 15pt;
   font-weight: 300;
   line-height: 1.65;
 }
@@ -79,7 +79,7 @@ body {
 
 /* nav */
 .navbar {
-  background-color: rgba(255, 255, 255, 0.9)
+  background-color: rgba(255, 255, 255, 0.95)
 }
 
 .nav-item {
@@ -93,8 +93,8 @@ body {
 }
 
 .nav-link.active {
-  color: #66CCFF;
-  border-bottom: 3px solid #66CCFF;
+  color: #6666CC;
+  border-bottom: 3px solid #6666CC;
   bottom: -6px;
 }
 
@@ -113,22 +113,36 @@ body {
   padding-top: 75px;
 }
 
+/*Button*/
+.btn {
+  color: #6666CC;
+  border-color: #6666CC;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #6666CC;
+  border-color: #6666CC
+}
+
 /*header*/
-.intro header{
+.intro header {
   margin: 0 0 2em 0;
 }
 
-.special h2{
+.special h2 {
   text-align: center;
   margin: 0 0 2em 0;
+}
+
+ul {
+  list-style: none;
 }
 
 /* .special {
   line-height: 1.5em;
   position: relative;
 } */
-
-
 /* .special h2:after {
   display: block;
   position: absolute;
@@ -145,8 +159,6 @@ body {
   background-image: -ms-linear-gradient(90deg, #192942, #325182, #5388db);
   background-image: linear-gradient(90deg, #192942, #325182, #5388db);
 } */
-
-
 /*Intro*/
 .intro {
   display: -moz-flex;
@@ -224,61 +236,80 @@ body {
 
 /*Skills*/
 .skills {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -moz-align-items: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  margin: 0 0 2em 0;
+    text-align: center;
+    margin: 5em 0 5em 0;
+}
+
+.skills ul li {
+  display: inline;
+}
+
+.skills ul li::after {
+  content: " | ";
+  color: gray;
+}
+
+.skills ul li:last-child:after {
+  content: " ";
+}
+
+.skills ul h5 {
+  color: #6666CC;
+}
+
+.skills .btn {
+  margin: 3em 0 0 0;
 }
 
 /*Project*/
 .projects {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -moz-align-items: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  margin: 0 0 2em 0;
+  margin: 5em 0 5em 0;
 }
-
 .project {
-  -moz-box-shadow: 0 0 3px #ccc;
+  /* -moz-box-shadow: 0 0 3px #ccc;
   -webkit-box-shadow: 0 0 3px #ccc;
-  box-shadow: 3px 3px 3px #ccc;
+  box-shadow: 3px 3px 3px #ccc; */
   margin-bottom: 50px;
-  border: .5px solid black;
+  border: 1px solid black;
   border-radius: 3px;
+  min-width: 100%;
+  max-height: 251px;
 }
 
 .project-image {
   float: left;
+}
 
+.project-image img {
+  width: 250px;
+  height: auto;
+  border-right: 1px solid black;
 }
 
 .project-info {
-  /* margin-left: 280px; */
-  margin-top: 25px;
-  text-align: center;
+  margin: 20px 50px 0 280px;
+  /* text-align: center; */
 }
 
-.project-info .btn {
-  color: #66CCFF;
-  border-color: #66CCFF;
+.info-content {
+  margin-left: 10px;
 }
 
-.project-info .btn:hover {
-  color: white;
-  background-color: #66CCFF;
+.info-title {
+  color: gray;
+  display: inline-block;
+  line-height: .1;
 }
 
-@media screen and (max-width: 800px) {
+.project .btn{
+  margin: 15px 0 0 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .project {
+    min-width: 100%;
+    max-height: 400px;
+  }
   .project-image {
     display: none
   }
@@ -288,6 +319,35 @@ body {
     margin: 0;
     padding: 30px 15px;
     top: auto;
-    transform: none
+    transform: none;
   }
+
+}
+
+/*Contact*/
+.contact {
+  margin: 5em 0 10em 0;
+  text-align: center;
+}
+
+.contact ul li {
+  display: inline;
+  font-size: 20px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: black;
+}
+
+.contact i {
+  color: #6666CC;
+}
+
+.contact a:hover {
+  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  color: #6666CC;
 }

@@ -7,9 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/bootstrap.css" />
   <link rel="stylesheet" href="assets/css/custom.css" />
-  <noscript>
-    <link rel="stylesheet" href="assets/css/noscript.css" />
-  </noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <body class="box animate fadeIn" data-spy="scroll" data-target="navbar">
@@ -22,7 +20,7 @@
     <a class="nav-item nav-link" href="#contact">Contact</a>
   </nav>
 
-  <div class="container" id="site">
+  <div class="container-fluid" id="site">
 
     <!-- Intro -->
     <div class="container main" id="intro">
@@ -46,22 +44,34 @@
           <header class="special">
             <h2>My Skills</h2>
           </header>
-          <p>A senior attending Oakland University, majoring in Information Technology. I have loved computers since I was a kid, so I decided to make a career out of my passion. I started programming in high school and never looked back. I am
-            always
-            ready to tackle new problems and expand my knowledge.
-            A senior attending Oakland University, majoring in Information Technology. I have loved computers since I was a kid, so I decided to make a career out of my passion. I started programming in high school and never looked back. I am always
-            ready to tackle new problems and expand my knowledge.
-            A senior attending Oakland University, majoring in Information Technology. I have loved computers since I was a kid, so I decided to make a career out of my passion. I started programming in high school and never looked back. I am always
-            ready to tackle new problems and expand my knowledge.
-            A senior attending Oakland University, majoring in Information Technology. I have loved computers since I was a kid, so I decided to make a career out of my passion. I started programming in high school and never looked back. I am always
-            ready to tackle new problems and expand my knowledge.
-            A senior attending Oakland University, majoring in Information Technology. I have loved computers since I was a kid, so I decided to make a career out of my passion. I started programming in high school and never looked back. I am always
-            ready to tackle new problems and expand my knowledge.
-            A senior attending Oakland University, majoring in Information Technology. I have loved computers since I was a kid, so I decided to make a career out of my passion. I started programming in high school and never looked back. I am always
-            ready to tackle new problems and expand my knowledge.
-            A senior attending Oakland University, majoring in Information Technology. I have loved computers since I was a kid, so I decided to make a career out of my passion. I started programming in high school and never looked back. I am always
-            ready to tackle new problems and expand my knowledge.
-          </p>
+          <ul class=" list-inline">
+            <h5 class="d-block d-md-inline mr-2">Web</h5>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <ul class="list-inline">
+            <h5 class="d-block d-md-inline mr-2">Database</h5>
+            <li>MySQL</li>
+          </ul>
+          <ul class="list-inline">
+            <h5 class="d-block d-md-inline mr-2">Development</h5>
+            <li>Java</li>
+            <li>Python</li>
+            <li>C++</li>
+          </ul>
+          <ul class="list-inline">
+            <h5 class="d-block d-md-inline mr-2">Tools</h5>
+            <li>Atom</li>
+            <li>Visual Studio</li>
+            <li>Photoshop</li>
+          </ul>
+          <ul class="list-inline">
+            <h5 class="d-block d-md-inline mr-2">Operating Systems</h5>
+            <li>Windows</li>
+            <li>Linux</li>
+          </ul>
+          <a href="assets/docs/resume.pdf" class="btn btn-outline-primary">View Resume</a>
         </div>
       </section>
     </div>
@@ -76,29 +86,43 @@
           <div class="row">
             <div class="project">
               <div class="project-image">
-                <img src="images/pic05.jpg" />
+                <img src="images/music.PNG" />
               </div>
               <div class="project-info">
                 <h3>Music With Friends</h3>
-                <p>
-                  A group project where the goal was to implement a project on a remote server, we created a website where someone could create a room, upload music and listen to that music with others.
-                </p>
-                <a class="btn btn-outline-primary" href="#">View Project</a>
+                <p class="info-title">About:</p><span class="info-content">A website where someone can create a room, upload music and listen to that music with others.</span></br>
+                <p class="info-title">Goal:</p><span class="info-content">Group prject where we had to implement a project on a remote server.</span></br>
+                <p class="info-title">Tools:</p><span class="info-content">HTML, CSS, PHP, C#, ASP.net, Visual Studio, Google Cloud, SQL</span></br>
+                <a class="btn btn-outline-primary" href="http://musicwithfriends.xyz" target="_blank">View Project</a>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="project">
               <div class="project-image">
-                <img src="images/pic05.jpg" />
+                <img src="images/knowledge.PNG" />
               </div>
               <div class="project-info">
-                <h3>Project Name Here</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam
-                  laoreet placerat.
+                <h3>Knowledge Clicker</h3>
+                <p class="info-title">About:</p><span class="info-content">A simple "clicker game".</span></br>
+                <p class="info-title">Goal:</p><span class="info-content">Learn to work in a group to design and create a software product.</span></br>
+                <p class="info-title">Tools:</p><span class="info-content">HTML, CSS, JavaScript, C#, ASP.net, Visual Studio</span></br>
+                <a class="btn btn-outline-primary" href="http://knowledgeclicker.azurewebsites.net/Default.aspx" target="_blank">View Project</a>
                 </p>
-                <a class="btn btn-outline-info" href="#">View Project</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="project">
+              <div class="project-image">
+                <img src="images/airline.PNG" />
+              </div>
+              <div class="project-info">
+                <h3>Flight Finder</h3>
+                <p class="info-title">About:</p><span class="info-content">A website where you can search for and purchase a ticket for a flight.</span></br>
+                <p class="info-title">Goal:</p><span class="info-content">A group project where we use AGILE software development.</span></br>
+                <p class="info-title">Tools:</p><span class="info-content">HTML, CSS, JavaScript, PHP, Cloud9, SQL </span></br>
+                <a class="btn btn-outline-primary" href="https://github.com/ianpara/airline-project" target="_blank">View Project</a>
               </div>
             </div>
           </div>
@@ -113,12 +137,23 @@
         <header class="special">
           <h2>Contact Me</h2>
         </header>
-        <ul>
-          <li>Phone: 4545454545</li>
-          <li>Phone: 4545454545</li>
+        <ul class="list-inline">
+          <i class="fa fa-envelope fa-1x d-block d-md-inline mr-2"></i>
+          <li class="list-item"><a href="mailto:ian.paraventi@gmail.com" target="_blank">ian.paraventi@gmail.com</a></li>
+        </ul>
+        <ul class="list-inline">
+          <i class="fa fa-github fa-1x d-block d-md-inline mr-2"></i>
+          <li class="list-item"><a href="https://github.com/ianpara" class="icon" target="_blank">My GitHub</a></li>
+        </ul>
+        <ul class="list-inline">
+          <i class="fa fa-linkedin fa-1x d-block d-md-inline mr-2"></i>
+          <li class="list-item"><a href="https://www.linkedin.com/in/ian-paraventi" class="icon" target="_blank">My LinkedIn</a></li>
+        </ul>
       </div>
     </section>
   </div>
+
+
 
   </div>
 
