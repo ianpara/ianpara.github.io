@@ -8,7 +8,7 @@
 
 	var	$window = $(window),
 		$body = $('body'),
-		$main = $('#main');
+		$main = $('#site');
 
 	// Breakpoints.
 		breakpoints({
@@ -20,29 +20,10 @@
 			xxsmall:  [ null,      '360px'  ]
 		});
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
-
 	// Nav.
 		var $nav = $('#nav');
 
 		if ($nav.length > 0) {
-
-			// Shrink effect.
-				$main
-					.scrollex({
-						mode: 'top',
-						enter: function() {
-							$nav.addClass('alt');
-						},
-						leave: function() {
-							$nav.removeClass('alt');
-						},
-					});
 
 			// Links.
 				var $nav_a = $nav.find('a');
@@ -50,7 +31,7 @@
 				$nav_a
 					.scrolly({
 						speed: 1000,
-						offset: function() { return $nav.height(); }
+						offset: 60,
 					})
 					.on('click', function() {
 
@@ -84,6 +65,7 @@
 						// Scrollex.
 							$section.scrollex({
 								mode: 'middle',
+								top: '150',
 								initialize: function() {
 
 									// Deactivate section.

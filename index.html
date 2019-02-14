@@ -5,171 +5,164 @@
   <title>Ian Paraventi</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <noscript>
-    <link rel="stylesheet" href="assets/css/noscript.css" />
-  </noscript>
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
-<body class="is-preload">
+<body class="box animate fadeIn" data-spy="scroll" data-target="navbar">
 
-  <!-- Wrapper -->
-  <div id="wrapper">
+  <!-- Nav -->
+  <nav class="navbar nav fixed-top justify-content-center" id="nav">
+    <a class="nav-item nav-link active" href="#intro">Introduction</a>
+    <a class="nav-item nav-link" href="#skills">Skills</a>
+    <a class="nav-item nav-link" href="#projects">Projects</a>
+    <a class="nav-item nav-link" href="#contact">Contact</a>
+  </nav>
 
-    <!-- Header -->
-    <header id="header" class="alt">
+  <div class="container-fluid" id="site">
 
-    </header>
-
-    <!-- Nav -->
-    <nav id="nav">
-      <ul>
-        <li><a href="#intro" class="active">Introduction</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#cta">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Main -->
-    <div id="main">
-
-      <!-- Introduction -->
-      <section id="intro" class="main">
-        <div class="spotlight">
-          <div class="content">
-            <header class="major">
-              <h2>I'm Ian Paraventi...</h2>
-            </header>
-            <p>A senior attending Oakland University, majoring in Information Technology. I have loved computers since I was a kid, so I decided to make a career out of my passion. I started programming in high school and never looked back. I am
-              always ready to tackle new problems and expand my knowledge.</p>
-          </div>
-          <span class="image"><img src="images/pic01.jpg" alt="" /></span>
+    <!-- Intro -->
+    <div class="container main" id="intro">
+      <section class="intro">
+        <div class="content">
+          <header>
+            <h2>Hi, I'm Ian Paraventi...</h2>
+          </header>
+          <p>A senior attending Oakland University, majoring in Information Technology. I have loved computers since I was a kid, so I decided to make a career out of my passion. I started programming in high school and never looked back. I am
+            always
+            ready to tackle new problems and expand my knowledge.</p>
         </div>
+        <span class="me"><img src="images/headshot-placeholder.png" alt="me" /></span>
       </section>
-
-      <!-- Skills Section -->
-      <section id="skills" class="main special">
-        <header class="major">
-          <h2>Skills</h2>
-        </header>
-        <ul class="features">
-          <li>
-            <span class="icon major style1 fa-code"></span>
-            <ul class="skills-list">
-              <li>HTML</li>
-              <li>JavaScript</li>
-              <li>Java</li>
-              <li>C++</li>
-              <li>Python</li>
-            </ul>
-          </li>
-          <li>
-            <span class="icon major style3 fa-desktop"></span>
-            <ul class="skills-list">
-              <li>Windows</li>
-              <li>Linux</li>
-              <li>Word</li>
-              <li>PowerPoint</li>
-              <li>Excel</li>
-            </ul>
-          </li>
-          <li>
-            <span class="icon major style5 fa-user"></span>
-            <ul class="skills-list">
-              <li>Ready to learn</li>
-              <li>Work well in groups</li>
-              <li>Quick learner</li>
-            </ul>
-          </li>
-        </ul>
-        <footer class="major">
-          <ul class="actions special">
-            <li><a href="assets/docs/resume.pdf" class="button">View Resume</a></li>
-          </ul>
-        </footer>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="main special">
-        <header class="major">
-          <h2>Projects</h2>
-        </header>
-        <div class="row">
-          <div class="col-lg-4 col-sm-6">
-            <div class="card">
-              <img class="card-img-top" src="images/airline.PNG" alt="">
-              <div class="card-body">
-                <a href="#">
-                  <h4 class="card-title">Flight Finder</h4>
-                </a>
-                <p class="card-text">A group project where we created a webpage where you can search for and purchase a ticket for a flight.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="card">
-              <img class="card-img-top" src="images/music.PNG" alt="">
-              <div class="card-body">
-                <a href="http://musicwithfriends.xyz">
-                  <h4 class="card-title">Music with Friends</h4>
-                </a>
-                <p class="card-text">A group project where we created a social site where you can create rooms to share and listen to music with others. </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="card">
-              <img class="card-img-top" src="images/knowledge.PNG" alt="">
-              <div class="card-body">
-                <a href="http://knowledgeclicker.azurewebsites.net/Default.aspx">
-                  <h4 class="card-title"> Knowledge Clicker Game</h4>
-                </a>
-                <p class="card-text">A group project where we created a simple "clicker game".</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- <footer class="major">
-          <ul class="actions special">
-            <li><a href="projects.html" class="button">View More</a></li>
-          </ul>
-        </footer> -->
-      </section>
-
-      <!-- Contact -->
-      <section id="cta" class="main special">
-        <header class="major">
-          <h2>Contact Me</h2>
-          <dl class="alt">
-            <dt>Phone</dt>
-            <dd>(586) 350-9189</dd>
-            <dt>Email</dt>
-            <dd><a href="mailto:ian.paraventi@gmail.com">ian.paraventi@gmail.com</a></dd>
-          </dl>
-        </header>
-
-      </section>
-
     </div>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <ul class="footer-list">
+    <!-- Skills -->
+    <div class="container" id="skills">
+      <section class="skills">
+        <div class="content">
+          <header class="special">
+            <h2>My Skills</h2>
+          </header>
+          <ul class=" list-inline">
+            <h5 class="d-block d-md-inline mr-2">Web</h5>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <ul class="list-inline">
+            <h5 class="d-block d-md-inline mr-2">Database</h5>
+            <li>MySQL</li>
+          </ul>
+          <ul class="list-inline">
+            <h5 class="d-block d-md-inline mr-2">Development</h5>
+            <li>Java</li>
+            <li>Python</li>
+            <li>C++</li>
+          </ul>
+          <ul class="list-inline">
+            <h5 class="d-block d-md-inline mr-2">Tools</h5>
+            <li>Atom</li>
+            <li>Visual Studio</li>
+            <li>Photoshop</li>
+          </ul>
+          <ul class="list-inline">
+            <h5 class="d-block d-md-inline mr-2">Operating Systems</h5>
+            <li>Windows</li>
+            <li>Linux</li>
+          </ul>
+          <a href="assets/docs/resume.pdf" class="btn btn-outline-primary">View Resume</a>
+        </div>
+      </section>
+    </div>
 
-        <li class="footer-list-item"><a href="https://github.com/ianpara" class="icon fa-github alt"></a></li>
+    <!-- Project -->
+    <div class="container" id="projects">
+      <section class="projects">
+        <div class="content">
+          <header class="special">
+            <h2>My Projects</h2>
+          </header>
+          <div class="row">
+            <div class="project">
+              <div class="project-image">
+                <img src="images/music.PNG" />
+              </div>
+              <div class="project-info">
+                <h3>Music With Friends</h3>
+                <p class="info-title">About:</p><span class="info-content">A website where someone can create a room, upload music and listen to that music with others.</span></br>
+                <p class="info-title">Goal:</p><span class="info-content">Group prject where we had to implement a project on a remote server.</span></br>
+                <p class="info-title">Tools:</p><span class="info-content">HTML, CSS, PHP, C#, ASP.net, Visual Studio, Google Cloud, SQL</span></br>
+                <a class="btn btn-outline-primary" href="http://musicwithfriends.xyz" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="project">
+              <div class="project-image">
+                <img src="images/knowledge.PNG" />
+              </div>
+              <div class="project-info">
+                <h3>Knowledge Clicker</h3>
+                <p class="info-title">About:</p><span class="info-content">A simple "clicker game".</span></br>
+                <p class="info-title">Goal:</p><span class="info-content">Learn to work in a group to design and create a software product.</span></br>
+                <p class="info-title">Tools:</p><span class="info-content">HTML, CSS, JavaScript, C#, ASP.net, Visual Studio</span></br>
+                <a class="btn btn-outline-primary" href="http://knowledgeclicker.azurewebsites.net/Default.aspx" target="_blank">View Project</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="project">
+              <div class="project-image">
+                <img src="images/airline.PNG" />
+              </div>
+              <div class="project-info">
+                <h3>Flight Finder</h3>
+                <p class="info-title">About:</p><span class="info-content">A website where you can search for and purchase a ticket for a flight.</span></br>
+                <p class="info-title">Goal:</p><span class="info-content">A group project where we use AGILE software development.</span></br>
+                <p class="info-title">Tools:</p><span class="info-content">HTML, CSS, JavaScript, PHP, Cloud9, SQL </span></br>
+                <a class="btn btn-outline-primary" href="https://github.com/ianpara/airline-project" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
+      </section>
+    </div>
+  </div>
 
-        <li class="footer-list-item"><a href="https://www.linkedin.com/in/ian-paraventi" class="icon fa-linkedin alt"></a></li>
+  <!-- Contact -->
+  <div class="container" id="contact">
+    <section class="contact">
+      <div class="content">
+        <header class="special">
+          <h2>Contact Me</h2>
+        </header>
+        <ul class="list-inline">
+          <i class="fa fa-envelope fa-1x d-block d-md-inline mr-2"></i>
+          <li class="list-item"><a href="mailto:ian.paraventi@gmail.com" target="_blank">ian.paraventi@gmail.com</a></li>
+        </ul>
+        <ul class="list-inline">
+          <i class="fa fa-github fa-1x d-block d-md-inline mr-2"></i>
+          <li class="list-item"><a href="https://github.com/ianpara" class="icon" target="_blank">My GitHub</a></li>
+        </ul>
+        <ul class="list-inline">
+          <i class="fa fa-linkedin fa-1x d-block d-md-inline mr-2"></i>
+          <li class="list-item"><a href="https://www.linkedin.com/in/ian-paraventi" class="icon" target="_blank">My LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
 
-      </ul>
-    </footer>
+
 
   </div>
 
+
+
   <!-- Scripts -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/jquery.scrollex.min.js"></script>
   <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -178,6 +171,6 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
 
-</body>
+
 
 </html>
