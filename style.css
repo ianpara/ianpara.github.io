@@ -1,0 +1,77 @@
+* { display: block; 
+color: white;
+font-family:Monospace; 
+margin:1.5em 0; 
+padding:0; 
+text-decoration:none;
+text-shadow: 0 0 4px #fff; }
+html { 
+background-color:
+rgb(30, 34, 39);
+max-width:100ch;
+padding:2ch;
+margin:auto;
+font-size:1.2em; }
+::selection { background: #0080FF;
+text-shadow: none; } 
+html::before {content:'<html>'}
+html::after {content:'</html>'}
+head::before {content:'<head>'}
+head::after {content:'</head>'}
+title::before {content:'<title>'}
+title::after {content:'</title>'}
+title { font-size: 2em;
+font-weight: bold; }
+body::before {content:'<body>'}
+body::after {content:'</body>'}
+h1::before {content:'<h1>'}
+h1::after {content:'</h1>'}
+h2::before {content:'<h2>'}
+h2::after {content:'</h2>'}
+h3::before {content:'<h3>'}
+h3::after {content:'</h3>'}
+h4::before {content:'<h4>'}
+h4::after {content:'</h4>'}
+p::before {content:'<p>'}
+p::after {content:'</p>'}
+pre::before {content:'<pre>'}
+pre::after {content:'</pre>'}
+code::before {content:'<code>'}
+code::after {content:'</code>'}
+a::before {content:'<a>'}
+a::after {content:'</a>'}
+aside::before {content:'<aside>'}
+aside::after {content:'</aside>'}
+blockquote::before {content:'<blockquote>'}
+blockquote::after {content:'</blockquote>'}
+em::before {content:'<em>'}
+em::after {content:'</em>'}
+strong::before {content:'<strong>'}
+strong::after {content:'</strong>'}
+style::before {content:'<style>'}
+style::after {content:'<\/style>'}
+*::before,*::after {
+color: #6666cc;
+font-weight:100;
+font-size:1.0em;
+text-shadow: 0 0 5px #7979d2; }
+style, blockquote { white-space: pre-wrap; } 
+a[href]::before { content: "<a href='" attr(href) "'>"}
+link[href]::before { content: "<link href='" attr(href) "'>"}
+code,em,strong { display:inline }
+hr { box-shadow: 0 0 5px #C8C8C8; }
+
+*::before { 
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    );
+    }
