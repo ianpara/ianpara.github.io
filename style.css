@@ -202,7 +202,7 @@ hr { box-shadow: 0 0 5px #C8C8C8; }
   .crt::after {
     content: " ";
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -212,11 +212,12 @@ hr { box-shadow: 0 0 5px #C8C8C8; }
     z-index: 2;
     pointer-events: none;
     animation: flicker 0.15s infinite;
+
   }
   .crt::before {
     content: " ";
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -225,9 +226,11 @@ hr { box-shadow: 0 0 5px #C8C8C8; }
     z-index: 2;
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
+ 
   }
   .crt {
     animation: textShadow 1.6s infinite;
+    
   }
   
  
