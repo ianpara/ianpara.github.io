@@ -4,13 +4,13 @@ function move() {
         i = 1;
         var elem = document.getElementById("myBar");
         var width = 10;
-        var id = setInterval(frame, 50);
+        var id = setInterval(frame, 80);
         function frame() {
             if (width >= 100) {
                 clearInterval(id);
                 i = 0;
                 window.open("other.html", "_self");
-
+                return;
             } else {
                 width++;
                 elem.style.width = width + "%";
