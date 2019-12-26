@@ -9,7 +9,7 @@ function move() {
             if (width >= 100) {
                 clearInterval(id);
                 i = 0;
-                window.open("other.html", "_self");
+                window.open("crt.html", "_self");
                 return;
             } else {
                 width++;
