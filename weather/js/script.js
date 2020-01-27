@@ -20,7 +20,7 @@ inputCity.addEventListener('input', function(e) {
 
 //time converter using moment.js
 function convertTime(utc,tz) {
-    //add timezone offense
+    //add timezone offset
     let date = (utc + tz);
     date = moment.unix(date).utc();
     return date;
@@ -37,8 +37,10 @@ function convertWindDir(deg) {
 let city = document.querySelector('.cityName');
 let weather = document.querySelector('.weather');
 let temp = document.querySelector('.temp');
+let tempValue = document.querySelector('.temp-value');
 let minTemp = document.querySelector('.min-temp');
 let maxTemp = document.querySelector('.max-temp');
+let feels = document.querySelector('.feels')
 let icon = document.querySelector('.icon');
 let sunrise = document.querySelector('.sunrise');
 let sunset = document.querySelector('.sunset');
@@ -58,13 +60,16 @@ form.addEventListener('submit', function(e) {
     // make request to our API
     axios.get('https://api.openweathermap.org/data/2.5/weather?q='+ cityName + '&units=' + unit + '&appid=472561ed8fcd58a94e7a86d842fd1f4e')
     .then(function(response) {
+
         city.innerHTML = response.data.name + ', ' + response.data.sys.country;
         t = convertTime(response.data.dt,response.data.timezone);
         ret.innerHTML = t.format('dddd h:mm a');
         weather.innerHTML =  response.data.weather[0].description;
         temp.innerHTML = Math.floor(response.data.main.temp) + '&deg';
-        minTemp.innerHTML = 'Low: ' + Math.floor(response.data.main.temp_min) + '&deg';
-        maxTemp.innerHTML = 'High: ' + Math.floor(response.data.main.temp_max) + '&deg';
+        feels.innerHTML = 'Feels like: ' + Math.floor(response.data.main.feels_like) + '&deg';
+        nt = minTemp.innerHTML = 'Low: ' + Math.floor(response.data.main.temp_min) + '&deg';
+        xt = maxTemp.innerHTML = 'High: ' + Math.floor(response.data.main.temp_max) + '&deg';
+        tempValue.innerHTML = '<img src="/weather/img/temperature.svg"></img>' + nt + ' ' + xt;
         sr = convertTime(response.data.sys.sunrise,response.data.timezone);
         sunrise.innerHTML = '<img src="/weather/img/sunrise.svg"></img>' + sr.format('h:mm a');
         ss = convertTime(response.data.sys.sunset,response.data.timezone);
@@ -88,6 +93,7 @@ form.addEventListener('submit', function(e) {
     city.innerHTML = '';
     weather.innerHTML = '';
     temp.innerHTML = '';
+    tempValue.innerHTML = '';
     minTemp.innerHTML = '';
     maxTemp.innerHTML = '';
     icon.src = '';
