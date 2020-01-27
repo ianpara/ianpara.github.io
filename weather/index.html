@@ -18,24 +18,25 @@
   <div class="container-fluid">
   
     <!-- search row -->
-    <div class="search row justify-content-center">
+    <div class="search row justify-content-center mb-2 mr-sm-2">
 
       <form class="form-inline">
         <label class="sr-only" for="city">Enter a city</label>
-        <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter a city name..." id="city" name="city" required>
+        <input type="text" class="form-control mb-3 mr-sm-2" placeholder="Enter a city name..." id="city" name="city" required>
 
-        <div class="custom-control custom-radio custom-control-inline mb-2 mr-sm-2">
-          <input type="radio" id="fahrenheit" name="unit" class="custom-control-input" value="imperial" checked>
-          <label class="custom-control-label" for="fahrenheit">Fahrenheit</label>
-        </div>
-        <div class="custom-control custom-radio custom-control-inline mb-2 mr-sm-2">
-          <input type="radio" id="celsius" name="unit" class="custom-control-input" value="metric">
-          <label class="custom-control-label" for="celsius">Celsius</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <label class="custom-control-inline mb-3 mr-sm-2">
+          <input type="radio" checked="checked" name="unit" value="imperial">
+          <span class="checkmark"></span>
+          <span class="label">F&deg</span>
+        </label>
+        <label class="custom-control-inline mb-3 mr-sm-2">
+          <input type="radio" name="unit" value="metric">
+          <span class="checkmark"></span>
+          <span class="label">C&deg</span>
+        </label>
+
+        <button type="submit" class="btn btn-primary mb-3 ml-sm-2">Submit</button>
       </form>
-
-      
 
     </div>
 
@@ -44,7 +45,7 @@
     <!-- weather card row -->
     <div class="row justify-content-center">
       
-      <div class="weather-info col-lg-5 col-lg-4 col-md-8 col-sm-12">
+      <div class="weather-info col pre-animation">
 
         <span class="cityName"></span>
         <span class="timeRet"></span>
@@ -58,7 +59,7 @@
           <span class="sunrise"></span>
           <span class="sunset"></span>
           <span class="wind"></span>
-          <span class="temp-value">
+          <span class="temp-minmax">
             <span class="min-temp"></span>
             <span class="max-temp"></span>
           </span>

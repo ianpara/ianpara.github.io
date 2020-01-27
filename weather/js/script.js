@@ -33,11 +33,43 @@ function convertWindDir(deg) {
     return compass[index]
 }
 
+// function tempColor(temp) {
+//     if (temp > 85) {
+//         container.classList.add('hot');
+//         element.classList.remove("warm");
+//         element.classList.remove("neutral");
+//         element.classList.remove("cold");
+//         element.classList.remove("freeze");
+//     } else if (65 > temp > 85){
+//         container.classList.add('warm');
+//         element.classList.remove("hot");
+//         element.classList.remove("neutral");
+//         element.classList.remove("cold");
+//         element.classList.remove("freeze");
+//     } else if (45 > temp > 65){
+//         container.classList.add('neutral');
+//         element.classList.remove("warm");
+//         element.classList.remove("hot");
+//         element.classList.remove("cold");
+//         element.classList.remove("freeze");
+//     } else if (25 > temp > 45){
+//         container.classList.add('cold');
+//         element.classList.remove("warm");
+//         element.classList.remove("neutral");
+//         element.classList.remove("hot");
+//         element.classList.remove("freeze");
+//     } else {
+//         container.classList.add('freeze');
+
+//     }
+// }
+
 // define vars
+let container = document.querySelector('.weather-info')
 let city = document.querySelector('.cityName');
 let weather = document.querySelector('.weather');
 let temp = document.querySelector('.temp');
-let tempValue = document.querySelector('.temp-value');
+let tempMinMax = document.querySelector('.temp-minmax');
 let minTemp = document.querySelector('.min-temp');
 let maxTemp = document.querySelector('.max-temp');
 let feels = document.querySelector('.feels')
@@ -61,21 +93,27 @@ form.addEventListener('submit', function(e) {
     axios.get('https://api.openweathermap.org/data/2.5/weather?q='+ cityName + '&units=' + unit + '&appid=472561ed8fcd58a94e7a86d842fd1f4e')
     .then(function(response) {
 
-        city.innerHTML = response.data.name + ', ' + response.data.sys.country;
-        t = convertTime(response.data.dt,response.data.timezone);
-        ret.innerHTML = t.format('dddd h:mm a');
-        weather.innerHTML =  response.data.weather[0].description;
-        temp.innerHTML = Math.floor(response.data.main.temp) + '&deg';
-        feels.innerHTML = 'Feels like: ' + Math.floor(response.data.main.feels_like) + '&deg';
-        nt = minTemp.innerHTML = 'Low: ' + Math.floor(response.data.main.temp_min) + '&deg';
-        xt = maxTemp.innerHTML = 'High: ' + Math.floor(response.data.main.temp_max) + '&deg';
-        tempValue.innerHTML = '<img src="/weather/img/temperature.svg"></img>' + nt + ' ' + xt;
-        sr = convertTime(response.data.sys.sunrise,response.data.timezone);
-        sunrise.innerHTML = '<img src="/weather/img/sunrise.svg"></img>' + sr.format('h:mm a');
-        ss = convertTime(response.data.sys.sunset,response.data.timezone);
-        sunset.innerHTML = '<img src="/weather/img/sunset.svg"></img>' + ss.format('h:mm a');
-        wind.innerHTML = '<img src="/weather/img/wind.svg"></img>' + convertWindDir(response.data.wind.deg) + ' at ' + Math.floor(response.data.wind.speed) + ' mph';
-        icon.src = 'http://openweathermap.org/img/wn/'+ response.data.weather[0].icon + '@2x.png';
+        container.classList.add('pre-animation');
+
+        setTimeout(function(){
+            city.innerHTML = response.data.name + ', ' + response.data.sys.country;
+            t = convertTime(response.data.dt,response.data.timezone);
+            ret.innerHTML = t.format('dddd h:mm a');
+            weather.innerHTML =  response.data.weather[0].description;
+            tempVal = Math.floor(response.data.main.temp)
+            temp.innerHTML = tempVal + '&deg';
+            feels.innerHTML = 'Feels like: ' + Math.floor(response.data.main.feels_like) + '&deg';
+            nt = minTemp.innerHTML = 'Lo: ' + Math.floor(response.data.main.temp_min) + '&deg';
+            xt = maxTemp.innerHTML = 'Hi: ' + Math.floor(response.data.main.temp_max) + '&deg';
+            tempMinMax.innerHTML = '<img src="./img/temperature-c.svg"></img>' + nt + ' ' + xt;
+            sr = convertTime(response.data.sys.sunrise,response.data.timezone);
+            sunrise.innerHTML = '<img src="./img/sunrise-c.svg"></img>' + sr.format('h:mm a');
+            ss = convertTime(response.data.sys.sunset,response.data.timezone);
+            sunset.innerHTML = '<img src="./img/sunset-c.svg"></img>' + ss.format('h:mm a');
+            wind.innerHTML = '<img src="./img/wind-c.svg"></img>' + convertWindDir(response.data.wind.deg) + ' at ' + Math.floor(response.data.wind.speed) + ' mph';
+            icon.src = 'http://openweathermap.org/img/wn/'+ response.data.weather[0].icon + '@2x.png';
+            container.classList.remove('pre-animation')
+        },1000)
     })
     .catch(function(error) {
         if (error = 404) {
@@ -90,15 +128,15 @@ form.addEventListener('submit', function(e) {
 
     //clear input
     inputCity.value = '';
-    city.innerHTML = '';
-    weather.innerHTML = '';
-    temp.innerHTML = '';
-    tempValue.innerHTML = '';
-    minTemp.innerHTML = '';
-    maxTemp.innerHTML = '';
-    icon.src = '';
-    sunrise.innerHTML = '';
-    sunset.innerHTML = '';
-    wind.innerHTML = '';
+    // city.innerHTML = '';
+    // weather.innerHTML = '';
+    // temp.innerHTML = '';
+    // tempValue.innerHTML = '';
+    // minTemp.innerHTML = '';
+    // maxTemp.innerHTML = '';
+    // icon.src = '';
+    // sunrise.innerHTML = '';
+    // sunset.innerHTML = '';
+    // wind.innerHTML = '';
     errorMessage.innerHTML = '';
 })
