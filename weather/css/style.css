@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
+    
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #5a8482;
+    font-weight: 300;
+    height: 100%;
+    background-color: #f5f6f7;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  /*///////////////////// search bar div /////////////////////*/
+  .search {
+    padding: 1em;
+  }
+
+    /*////// search input /////*/
+  input[type=text] {
+    color: #5a8482;
+    border: none;
+    border-radius: 25px;
+    background: #f5f6f7;
+    box-shadow: 2px 2px 2px 0px #DFE4EA inset, -2px -2px 2px 0px #ffffff inset;
+    transition: background 2s;
+  }
+
+   /*////// unit input /////*/
+  input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkmark{
+    height: 25px;
+    width: 25px;
+    color: #5a8482;
+    border: none;
+    border-radius: 25px;
+    background: #f5f6f7;
+    box-shadow: 2px 2px 2px 0px #DFE4EA, -2px -2px 2px 0px #ffffff;
+    transition: background 2s;
+
+  }
+
+  .custom-control-inline:hover input ~ .checkmark {
+    box-shadow: 2px 2px 2px 0px #DFE4EA inset, -2px -2px 2px 0px #ffffff inset;
+    cursor: pointer;
+    transition: background 2s;
+  }
+
+  .custom-control-inline input:checked ~ .checkmark {
+    box-shadow: 2px 2px 2px 0px #DFE4EA inset, -2px -2px 2px 0px #ffffff inset;
+    transition: background 2s;
+  }
+
+  .custom-control-inline input:checked ~ .label  {
+    font-weight: 600;
+  }
+
+  .label {
+    margin-left: .5em;
+  }
+
+
+   /*////// submit button /////*/
+  .btn {
+    color: #5a8482;
+    border: none;
+    border-radius: 25px;
+    background: #f5f6f7;
+    box-shadow: 2px 2px 2px 0px #DFE4EA, -2px -2px 2px 0px #ffffff;
+    transition: background 2s;
+  }
+
+  .btn::selection, .btn:hover {
+    color: #5a8482;
+    border: none;
+    background: #f5f6f7;
+    box-shadow: 2px 2px 2px 0px #DFE4EA inset, -2px -2px 2px 0px #ffffff inset;
+  }
+
+  .btn:focus {
+    color: #5a8482;
+    border: none;
+    background: #f5f6f7;
+    box-shadow: 2px 2px 2px 0px #DFE4EA inset, -2px -2px 2px 0px #ffffff inset;
+    
+  }
+
+  /*///////////////////// weather card div /////////////////////*/
+  .weather-info {
+    position: relative;
+    border-radius: 30px;
+    margin: 5em 0 0 0;
+    max-width: 620px;
+    height: 170px;
+    background: #f5f6f7;
+    box-shadow: 2px 2px 2px 0px #DFE4EA, -2px -2px 2px 0px #ffffff;
+
+    transition: all .5s;
+  }
+
+  @media (max-width: 575.98px) { 
+    .weather-info {
+      margin-right: 1em;
+      margin-left: 1em;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 330.98px) { 
+    .weather-info {
+      height: 220px;
+      font-size: 14px;
+    }
+
+    .icon {
+      display: none;
+    }
+  }
+
+  .pre-animation {
+    opacity: 0;
+    max-height: 0;
+  }
+
+
+  .cityName {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+
+  .temp {
+    position: absolute;
+    font-size: 40px;
+    font-weight: 400;
+    top: 10px;
+    right: 25px;
+  }
+
+
+  .icon {
+    position: absolute;
+    top: 0px;
+    right: 65px;
+
+    width: 120px;
+    height: auto;
+  }
+
+  .feels {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    font-weight: 300;
+  }
+
+  .weather {
+    position: absolute;
+    top: 70px;
+    left: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  .timeRet {
+    position: absolute;
+    top: 45px;
+    left: 25px;
+  }
+
+  .other-info {
+    position: relative;
+    top: 120px;
+    font-weight: 300;
+    padding: 0 .3em 0 .3em;
+
+    
+  }
+
+  .other-info img {
+    width: 50px;
+    height: auto;
+    padding: 0 10px 0 10px;
+
+  }
+
+  .error-message {
+    color: red;
+    text-align: center;
+  }

@@ -1,12 +1,3 @@
-// new autoComplete({
-//     data: {
-//         src: async () => {
-//             const query = document.querySelector('#autocomplete').value;
-//             const source = awat fetch('js/city')
-//         }
-//     }
-// })
-
 // select text input
 const inputCity = document.getElementById('city');
 
@@ -33,37 +24,6 @@ function convertWindDir(deg) {
     return compass[index]
 }
 
-// function tempColor(temp) {
-//     if (temp > 85) {
-//         container.classList.add('hot');
-//         element.classList.remove("warm");
-//         element.classList.remove("neutral");
-//         element.classList.remove("cold");
-//         element.classList.remove("freeze");
-//     } else if (65 > temp > 85){
-//         container.classList.add('warm');
-//         element.classList.remove("hot");
-//         element.classList.remove("neutral");
-//         element.classList.remove("cold");
-//         element.classList.remove("freeze");
-//     } else if (45 > temp > 65){
-//         container.classList.add('neutral');
-//         element.classList.remove("warm");
-//         element.classList.remove("hot");
-//         element.classList.remove("cold");
-//         element.classList.remove("freeze");
-//     } else if (25 > temp > 45){
-//         container.classList.add('cold');
-//         element.classList.remove("warm");
-//         element.classList.remove("neutral");
-//         element.classList.remove("hot");
-//         element.classList.remove("freeze");
-//     } else {
-//         container.classList.add('freeze');
-
-//     }
-// }
-
 // define vars
 let container = document.querySelector('.weather-info')
 let city = document.querySelector('.cityName');
@@ -82,6 +42,65 @@ let errorMessage = document.querySelector('.error-message');
 
 // select form
 const form = document.querySelector('form');
+
+new autoComplete({
+    data: {                              // Data src [Array, Function, Async] | (REQUIRED)
+      src: async () => {
+        // User search query
+        const query = document.querySelector("#city").value;
+        // Fetch External Data Source
+        const source = await fetch(`js/city.list.min.json`);
+        // Format data into JSON
+        const data = await source.json();
+        // Return Fetched data
+        return data;
+      },
+      key: ["name"],
+      cache: true
+    },
+    placeHolder: "Find a city...",     // Place Holder text                 | (Optional)
+    selector: "#city",                 // Input field selector              | (Optional)
+    threshold: 0,                      // Min. Chars length to start Engine | (Optional)
+    debounce: 0,                       // Post duration for engine to start | (Optional)
+    searchEngine: "strict",            // Search Engine type/mode           | (Optional)
+    resultsList: {                     // Rendered results list object      | (Optional)
+        render: true,
+        container: source => {
+            source.setAttribute("id", "autoComplete_list");
+        },
+        destination: document.querySelector("#city"),
+        position: "afterend",
+        element: "ul"
+    },
+    maxResults: 5,                         // Max. number of rendered results | (Optional)
+    highlight: true,                       // Highlight matching results      | (Optional)
+    resultItem: {                          // Rendered result item            | (Optional)
+        content: (data, source) => {
+            source.innerHTML = data.match;
+        },
+        element: "li"
+    },
+    noResults: () => {                     // Action script on noResults      | (Optional)
+        const result = document.createElement("li");
+        result.setAttribute("class", "autoComplete_result");
+        result.setAttribute("tabindex", "1");
+        result.innerHTML = "No Results";
+        document.querySelector("#autoComplete_list").appendChild(result);
+    },
+    onSelection: feedback => {             // Action script onSelection event | (Optional)
+        const selection = feedback.selection.value;
+        let sel_city = selection.name;
+        let sel_country = selection.country;
+
+		// Change value in input
+        document.querySelector("#city").value = sel_city + ', ' + sel_country;
+        // Change value in cityName
+        cityName = sel_city + ', ' + sel_country;
+
+		// Concole log autoComplete data feedback
+		console.log(sel_city, sel_country);
+    }
+});
 
 // When form is submitted print 'submitted' to the browser console
 form.addEventListener('submit', function(e) {
@@ -113,7 +132,7 @@ form.addEventListener('submit', function(e) {
             wind.innerHTML = '<img src="./img/wind-c.svg"></img>' + convertWindDir(response.data.wind.deg) + ' at ' + Math.floor(response.data.wind.speed) + ' mph';
             icon.src = 'http://openweathermap.org/img/wn/'+ response.data.weather[0].icon + '@2x.png';
             container.classList.remove('pre-animation')
-        },1000)
+        },500)
     })
     .catch(function(error) {
         if (error = 404) {
