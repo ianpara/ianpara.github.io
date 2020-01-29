@@ -19,6 +19,9 @@ body {
 	font-size: 1rem;
 	font-weight: 300;
 	line-height: 1.65;
+	transition: background 1s;
+	-webkit-transition: background 1s, color 1s;
+	
 }
 
 ::selection {
@@ -453,7 +456,7 @@ a {
 }
 
 .card-reveal {
-	background-color: rgba(255, 255, 255, 0.95);
+	background-color: rgba(255, 255, 255, 1);
 }
 
 .card i {
