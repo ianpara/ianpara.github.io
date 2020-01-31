@@ -232,6 +232,9 @@ a {
 
 /*////////////////////////////////////////// Cards //////////////////////////////////////////*/
 
+.flickity-viewport {
+	height: 29em !important;
+}
 .card-panel {
 	-webkit-transition: -webkit-box-shadow .25s;
 	transition: -webkit-box-shadow .25s;
@@ -240,6 +243,7 @@ a {
 	padding: 24px;
 	margin: 0.5rem 0 1rem 0;
 	border-radius: 5px;
+	border: none;
 	background-color: #fff;
 }
 
@@ -247,13 +251,14 @@ a {
 	position: relative;
 	margin: 3rem 0 0 0;
 	background-color: #fff;
+	box-shadow: 4px 4px 8px rgba(160, 160, 160, 0.5);
 	-webkit-transition: -webkit-box-shadow .25s;
 	transition: -webkit-box-shadow .25s;
 	transition: box-shadow .25s;
 	transition: box-shadow .25s, -webkit-box-shadow .25s;
-	border-radius: 5px;
-	width: 18rem;
-	height: 21rem;
+	border-radius: 20px;
+	width: 20rem;
+	height: 23rem;
 }
 
 .card .card-title {
@@ -263,108 +268,6 @@ a {
 
 .card .card-title.activator {
 	cursor: pointer;
-}
-
-.card.small,
-.card.medium,
-.card.large {
-	position: relative;
-}
-
-.card.small .card-image,
-.card.medium .card-image,
-.card.large .card-image {
-	max-height: 60%;
-	overflow: hidden;
-}
-
-.card.small .card-image + .card-content,
-.card.medium .card-image + .card-content,
-.card.large .card-image + .card-content {
-	max-height: 40%;
-}
-
-.card.small .card-content,
-.card.medium .card-content,
-.card.large .card-content {
-	max-height: 100%;
-	overflow: hidden;
-}
-
-.card.small .card-action,
-.card.medium .card-action,
-.card.large .card-action {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-.card.small {
-	height: 300px;
-}
-
-.card.medium {
-	height: 400px;
-}
-
-.card.large {
-	height: 500px;
-}
-
-.card.horizontal {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-}
-
-.card.horizontal.small .card-image,
-.card.horizontal.medium .card-image,
-.card.horizontal.large .card-image {
-	height: 100%;
-	max-height: none;
-	overflow: visible;
-}
-
-.card.horizontal.small .card-image img,
-.card.horizontal.medium .card-image img,
-.card.horizontal.large .card-image img {
-	height: 100%;
-}
-
-.card.horizontal .card-image {
-	max-width: 50%;
-}
-
-.card.horizontal .card-image img {
-	border-radius: 5px 0 0 5px;
-	max-width: 100%;
-	width: auto;
-}
-
-.card.horizontal .card-stacked {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-box-flex: 1;
-	-webkit-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
-	position: relative;
-}
-
-.card.horizontal .card-stacked .card-content {
-	-webkit-box-flex: 1;
-	-webkit-flex-grow: 1;
-	-ms-flex-positive: 1;
-	flex-grow: 1;
 }
 
 .card.sticky-action .card-action {
@@ -382,7 +285,7 @@ a {
 
 .card .card-image img {
 	display: block;
-	border-radius: 5px 5px 0 0;
+	border-radius: 20px 20px 0 0;
 	position: relative;
 	left: 0;
 	right: 0;
@@ -472,10 +375,12 @@ a {
 
 /* position outside */
 .flickity-prev-next-button.previous {
-	left: -20px;
+	left: -30px;
+	top: 225px;
 }
 .flickity-prev-next-button.next {
-	right: -20px;
+	right: -30px;
+	top: 225px;
 }
 
 .flickity-button {
@@ -513,7 +418,7 @@ a {
 	-ms-align-items: center;
 	align-items: center;
 	text-align: center;
-	margin: 6em 0 6em 0;
+	margin: 0 0 6em 0;
 }
 
 .contact header {
@@ -566,6 +471,12 @@ body.dark .skills ul li {
 
 body.dark .contact ul li a {
 	color: white;
+}
+
+body.dark .card {
+
+box-shadow: 4px 4px 8px rgba(160, 160, 160, 0.1);
+
 }
 
 .mode-btn {
