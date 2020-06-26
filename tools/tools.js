@@ -14,17 +14,15 @@ function massOpen() {
 
 }
 
-
-
 function customMassOpen() {
 
     var form = document.getElementById('form');
-    var BASE_URL = form.elements.baseUrl.value;
-    var paths = form.elements.pathList.value;
-    var test = form.elements.testString.value;
-    var testUrl = form.elements.testUrl.value;
+    var BASE_URL = form.elements.baseUrl.value; console.log(BASE_URL);
+    var paths = form.elements.pathList.value; console.log(paths);
+    var searchString = form.elements.searchString.value; console.log(searchString);
+    var customURLInsert = form.elements.customURLInsert.value; console.log(customURLInsert);
 
-    var lines = paths.split('\n');
+    var lines = paths.split('\n'); console.log(lines);
 
     for (var i = 0; i < lines.length ; i++) {
         //combines base_url and pathname
@@ -34,32 +32,25 @@ function customMassOpen() {
         var pathArray = pathToArray(url);
 
         //assign x to boolean (t/f) if test value is in path
-        var x = pathArray.includes(test)
+        var x = pathArray.includes(searchString)
+        console.log(x);
 
          //assign es to boolean (t/f) if es is in first part of path
         var es = pathArray[1].includes('es')
 
-        //If path has string (ie guaFooter.php) then open page in apply page
-        console.log(es);
+        //If path has search string (ie guaFooter.php) then open page in apply page
         if (x) {
+            //If spanish page, add /es/
             if (es) {
-                var url = BASE_URL + pathArray[1] + '/' + pathArray[2] + testUrl + pathArray[4] + '/'; 
+                var url = BASE_URL + pathArray[1] + '/' + pathArray[2] + customURLInsert + pathArray[4] + '/'; 
             } else {
-                var url = BASE_URL + pathArray[1] + testUrl + pathArray[3] + '/';
+                var url = BASE_URL + pathArray[1] + customURLInsert + pathArray[3] + '/';
             }
-            window.open(url, '_blank')
-            console.log(url);
-
-            //Else open page in index page
-            } else {
-                if (es){
-                    var url = BASE_URL + pathArray[1] + '/' + pathArray[2] + '/' + pathArray[3] + '/'  + pathArray[4] + '/';
-                } else {
-                    var url = BASE_URL + pathArray[1] + '/' + pathArray[2] + '/' + pathArray[3] + '/';
-                }
-            window.open(url, '_blank')
-            console.log(url);
         }
+
+        //Open page
+        window.open(url, '_blank')
+        console.log(url);
 
     };
 

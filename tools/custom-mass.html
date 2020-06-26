@@ -26,28 +26,28 @@
 </body><br><br><br>
 <main class="container" role="main">
   <h1>Custom Mass Open URLs</h1>
-  <p class="font-weight-light">What this does: by default if the path has guaFooter in it, that page will open in an apply page.</p>
+  <p class="font-weight-light">Built to easily open a list apply pages.</p>
   <form action="javascript:customMassOpen()" method="POST" id="form">
     <div class="form-group">
       <label for="base_url">Base URL</label>
-      <input class="form-control" type="text" name="baseUrl" placeholder="https://www.website.com/">
+      <input class="form-control" type="text" name="baseUrl" placeholder="https://www.website.com/" required>
     </div>
     <div class="form-group">
       <label for="path_list">Path List</label>
-      <textarea class="form-control"  name="pathList" placeholder="Path List" style="height:200px;"></textarea>
-      <small class="form-text text-muted">Max of 15 paths</small>
+      <textarea class="form-control"  name="pathList" placeholder="apply/lpgs/default/index.php" style="height:200px;" re></textarea>
+      <small class="form-text text-muted">Tip: A lot of paths may cause browser issues, limit to less than 15.</small>
     </div>
     <h4>Rules</h4>
     <div class="form-row">
         <div class="form-group col">
-            <label for="testString">In Path?</label>
-            <input class="form-control" type="text" name="testString" value="guaFooter.php">
+            <label for="searchString">In Path?</label>
+            <input class="form-control" type="text" name="searchString" value="guaFooter.php">
             <small class="form-text text-muted">What the program will search for in the path name.</small>
           </div>
         <div class="form-group col">
-            <label for="testUrl">Custom URL</label>
-            <input class="form-control" type="text" name="testUrl" value="?lpgid=">
-            <small class="form-text text-muted">Set the URL if the text is found, default is /path/?lpgid=file</small>
+            <label for="customURLInsert">Custom URL</label>
+            <input class="form-control" type="text" name="customURLInsert" value="?lpgid=">
+            <small class="form-text text-muted">Set the what will be added URL if the text is found, default is /path/?lpgid=lpgid</small>
         </div>
       </div>
       <!-- <div class="form-row">
