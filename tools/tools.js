@@ -36,15 +36,27 @@ function customMassOpen() {
         //assign x to boolean (t/f) if test value is in path
         var x = pathArray.includes(test)
 
-        //If path has guaFooter then open page in apply page
+         //assign es to boolean (t/f) if es is in first part of path
+        var es = pathArray[1].includes('es')
+
+        //If path has string (ie guaFooter.php) then open page in apply page
+        console.log(es);
         if (x) {
-            var url = BASE_URL + pathArray[1] + testUrl + pathArray[3] + '/';
+            if (es) {
+                var url = BASE_URL + pathArray[1] + '/' + pathArray[2] + testUrl + pathArray[4] + '/'; 
+            } else {
+                var url = BASE_URL + pathArray[1] + testUrl + pathArray[3] + '/';
+            }
             window.open(url, '_blank')
             console.log(url);
 
             //Else open page in index page
             } else {
-            var url = BASE_URL + pathArray[1] + '/' + pathArray[2] + '/' + pathArray[3] + '/';
+                if (es){
+                    var url = BASE_URL + pathArray[1] + '/' + pathArray[2] + '/' + pathArray[3] + '/'  + pathArray[4] + '/';
+                } else {
+                    var url = BASE_URL + pathArray[1] + '/' + pathArray[2] + '/' + pathArray[3] + '/';
+                }
             window.open(url, '_blank')
             console.log(url);
         }
@@ -71,7 +83,6 @@ function parseUrl(address) {
     }
 
     var parseObj = {hosttname:parser.host, pathname:parser.pathname};
-    console.log(parseObj);
 
     return parseObj;
 
@@ -83,8 +94,6 @@ function pathToArray(address) {
     var q = parseUrl(address);
 
     var parts = q.pathname.split("/")
-
-    var x = parts.includes('guaFooter.php')
 
     return parts;
 
