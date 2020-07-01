@@ -19,8 +19,8 @@ body {
 	font-size: 1rem;
 	font-weight: 300;
 	line-height: 1.65;
-	transition: background 1s;
-	-webkit-transition: background 1s, color 1s;
+	/* transition: background .5s;
+	-webkit-transition: background .5s, color .5s; */
 	
 }
 
@@ -93,6 +93,15 @@ a {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 	background: #555;
+}
+
+/*////////////////////////////////////////// NAV //////////////////////////////////////////*/
+.navbar {
+	background-color:  rgb(30, 34, 39);;
+}
+
+.nav-link {
+	padding: 0;
 }
 
 /*////////////////////////////////////////// INTRO //////////////////////////////////////////*/
@@ -366,6 +375,10 @@ a {
 	float: right;
 }
 
+.info-content {
+	color: #212529 !important;
+}
+
 /*////////////////////////////////////////// Slider //////////////////////////////////////////*/
 
 .carousel-cell {
@@ -453,15 +466,7 @@ body.dark .flickity-button {
 	background: rgba(160, 160, 160, 0.2);
 }
 
-body.dark .spotlight .content h2 {
-	color: white;
-}
-
-body.dark .spotlight .content p {
-	color: white;
-}
-
-body.dark .major {
+body.dark h1, body.dark h2, body.dark h4, body.dark p, body.dark .major, body.dark label {
 	color: white;
 }
 
@@ -474,9 +479,15 @@ body.dark .contact ul li a {
 }
 
 body.dark .card {
-
 box-shadow: 4px 4px 8px rgba(160, 160, 160, 0.1);
+}
 
+body.dark tr, body.dark th {
+	color: white;
+}
+
+body.dark .tool-link {
+	color: #6666cc;
 }
 
 .mode-btn {
