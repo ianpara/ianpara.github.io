@@ -73,6 +73,9 @@ a {
 	}
 }
 
+/*////////////////////////////////////////// FORM //////////////////////////////////////////*/
+
+
 /*////////////////////////////////////////// SCROLLBAR //////////////////////////////////////////*/
 
 /* width */
@@ -253,7 +256,7 @@ a {
 	margin: 0.5rem 0 1rem 0;
 	border-radius: 5px;
 	border: none;
-	background-color: #fff;
+	background-color: #eee;
 }
 
 .card {
@@ -376,7 +379,7 @@ a {
 }
 
 .info-content {
-	color: #212529 !important;
+	color: #212529;
 }
 
 /*////////////////////////////////////////// Slider //////////////////////////////////////////*/
@@ -466,7 +469,7 @@ body.dark .flickity-button {
 	background: rgba(160, 160, 160, 0.2);
 }
 
-body.dark h1, body.dark h2, body.dark h4, body.dark p, body.dark .major, body.dark label {
+body.dark h1, body.dark h2, body.dark h4, body.dark p, body.dark .major, body.dark label, body.dark span {
 	color: white;
 }
 
@@ -479,7 +482,12 @@ body.dark .contact ul li a {
 }
 
 body.dark .card {
-box-shadow: 4px 4px 8px rgba(160, 160, 160, 0.1);
+	box-shadow: none;
+	background-color: rgba(41, 47, 54, 0.7);
+}
+
+body.dark .card-reveal {
+	background-color: rgba(41, 47, 54, 1);
 }
 
 body.dark tr, body.dark th {
@@ -488,6 +496,20 @@ body.dark tr, body.dark th {
 
 body.dark .tool-link {
 	color: #6666cc;
+}
+
+body.dark .image {
+	filter: brightness(.8) contrast(1.1);
+}
+
+body.dark input[type=text] , body.dark textarea,body.dark textarea:focus  {
+	background-color:rgba(41, 47, 54, 0.7);
+	color: white;
+}
+
+body.dark input[type=text], body.dark textarea {
+	border: 2px solid rgba(41, 47, 54, 1);
+	border-radius: 4px;
 }
 
 .mode-btn {
@@ -507,3 +529,5 @@ body.dark .tool-link {
 	background-color: rgba(204, 204, 204, .5);
 	z-index: 1;
 }
+
+

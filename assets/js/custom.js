@@ -7,7 +7,22 @@ $('.main-carousel').flickity({
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
-	(localStorage.getItem('mode') || 'dark') === 'dark'
-		? document.querySelector('body').classList.add('dark')
-		: document.querySelector('body').classList.remove('dark');
+
+		if ((localStorage.getItem('mode') || 'dark') === 'dark') {
+			document.querySelector('body').classList.add('dark');
+		} else {
+			document.querySelector('body').classList.remove('dark');
+
+		}
 });
+
+function modeToggle() {
+	localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ?'light' : 'dark'); 
+	if (localStorage.getItem('mode') === 'dark') {
+		document.querySelector('body').classList.add('dark')
+	} else {
+		document.querySelector('body').classList.remove('dark');
+	}
+
+}
+

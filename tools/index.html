@@ -30,7 +30,7 @@
 
 <body>
 
-  <a class="mode-btn" id="dark-mode" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')">
+  <a class="mode-btn" id="dark-mode" onclick="modeToggle()">
     <i class="fas fa-lightbulb"></i>
   </a>
 
@@ -73,7 +73,7 @@
           </tr>
           <tr>
             <th scope="row"><a class="tool-link" href="word-finder.html">Word Finder</a></th>
-            <td>Find a certain word in a list of URLs. (WIP)</td>
+            <td><i>Work in Progress</i> - Find a certain word in a list of URLs.</td>
             <td>Jan 22, 2020</td>
           </tr>
           <tr>
