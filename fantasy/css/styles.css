@@ -52,7 +52,7 @@ a {
 }
 
 
-@media (min-width: 768px) { 
+/* @media (min-width: 768px) { 
 
     * {
         font-size: 90%;
@@ -65,7 +65,7 @@ a {
         font-size: 100%;
     }
 
-}
+} */
 
 /*/////////////////// Body ////////////////////*/
 body {
@@ -85,38 +85,35 @@ body {
 #top-rect {
     position: absolute;
     overflow: hidden;
-    width: 70em;
-    height: 100em;
+    width: 80em;
+    height: 110em;
     background: linear-gradient(135deg, #085BA8 0%,rgba(0, 106, 204, 1) 100%);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
     left: -5em;
     bottom: -30em;
 
     transform: rotate(-60deg);
-    transition: all 1s;
 }
 
 @media (min-width: 768px) { 
 
     #top-rect {
-        width: 100em;
-        height: 200em;
-        left: 80em;
-        top: -97em;
+        width: 50em;
+        height: 90em;
+        left: 20em;
+        bottom: 35em;
         transform: rotate(-60deg);
-        transition: top 2s, bottom 2s left 2s;
     }
 }
 
 @media (min-width: 992px) {
         
     #top-rect {
-        width: 900.94px;
-        height: 1840.49px;
+        width: 50em;
+        height: 120em;
         left: 60em;
         top: -70em;
         transform: rotate(-60deg); 
-        transition: top 2s, bottom 2s left 2s;
     }
 }
 
@@ -322,4 +319,8 @@ button,
 
 .feature-svg {
     margin-right: 1em;
+}
+
+.showcase-buttons {
+    display: block;
 }

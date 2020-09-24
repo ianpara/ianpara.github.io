@@ -7,6 +7,7 @@
     <title>Fantasync</title>
     <meta name="Mock fantasy sports site" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css?v=1.0">
@@ -25,7 +26,7 @@
             <svg width="2000" height="2000" id="top-rect">
                 <rect/>
             </svg> 
-            <div class="col-6">
+            <div class="col-lg-6 col-md-12">
                 <span class="d-flex align-items-center logo">
                     <svg width="60" height="50" id="F-logo">
                     <rect x="0" y="0" width="50" height="10" fill="#0377BC"/>
@@ -44,7 +45,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-md-12 mt-5">
                 <svg width="801" height="520" viewBox="0 0 801 520" fill="none" xmlns="http://www.w3.org/2000/svg" id="football-player">
                     <path d="M9.41523 487.306C6.83189 487.831 4.37433 488.849 2.17792 490.306C-3.63119 495.23 8.7573 500.556 19.1078 502.144C77.5358 511.159 140.281 503.748 200.442 508.448C229.84 510.726 258.212 515.875 287.659 518.184C314.217 520.27 341.176 520.013 367.991 519.676C498.99 518.019 629.834 514.431 760.523 508.913C775.576 508.287 792.826 506.924 800.85 499.978C783.439 493.867 761.181 494.396 740.512 494.926C644.373 497.396 547.849 495.311 452.368 488.718C456.428 487.114 455.577 483.489 451.886 481.644C448.195 479.799 442.996 479.334 438.07 478.965C371.714 474.153 309.387 478.308 244.283 485.173C195.178 490.354 160.003 473.223 111.684 474.49C76.6211 475.404 41.0925 478.677 9.41523 487.306Z" fill="url(#paint0_linear)"/>
                     <path d="M138.126 484.147C139.723 487.066 142.254 489.365 145.315 490.675C154.526 495.086 165.791 493.306 174.697 488.301C183.604 483.296 190.536 475.469 196.81 467.368C199.859 463.454 202.892 459.236 203.727 454.343C204.561 449.451 202.507 443.692 197.87 441.88C195.758 441.198 193.52 441.001 191.322 441.302C174.778 442.682 125.111 457.343 138.126 484.147Z" fill="#7C7C7C"/>
@@ -329,13 +330,20 @@
             <div class="col-6">
                 <h2 class="small-header">Import leagues from popular platforms</h2>
                 <p class="content">Import leagues from Yahoo, ESPN, MyFantasyLeague, and more into Fantasync. Instantly get advanced analytics about your team and ways to beat your league mates. </p>
-                    <a class="btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="feature-svg">
+                <span class="showcase-buttons">    
+                <a class="btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="feature-svg">
                         <path d="M10 20L1.33975 9.41176L18.6603 9.41177L10 20Z" fill="#006ACC"/>
                         <rect x="13.332" y="10.5879" width="6.66667" height="10.5882" transform="rotate(-180 13.332 10.5879)" fill="#006ACC"/>
                         </svg>Import Your Leagues
                     </a>
-                <a class="btn">Lineup Generator</a>
-                <a class="btn">Exclusive Articles</a>
+                <a class="btn"><img class="feature-svg" id="" src="img/iconfinder_arrow_17_393256.svg"width="20" height="20">Lineup Generator</a>
+                <a class="btn"><svg width="20" height="17" viewBox="0 0 20 17" xmlns="http://www.w3.org/2000/svg" class="feature-svg">
+                    <path d="M19.6759 16.6346C18.6975 15.4664 18.9347 13.8778 19.1673 13.0198C19.3863 12.4843 19.5096 11.9143 19.5096 11.3184C19.5096 10.2541 19.1303 9.26487 18.4831 8.43555C17.8528 12.3058 13.9687 15.3026 9.24609 15.3764C10.331 16.1303 11.7224 16.5847 13.24 16.5847C14.3496 16.5847 15.3882 16.3405 16.291 15.9162C17.6768 16.8347 19.4024 16.9608 19.4024 16.9608C20.1484 16.9604 19.6759 16.6346 19.6759 16.6346Z" fill="white"/>
+                    <path d="M17.7743 7.33374C17.7743 3.33621 13.8699 0.0830078 9.07173 0.0830078C4.2729 0.0830078 0.368943 3.33621 0.368943 7.33374C0.368943 8.11482 0.525454 8.89682 0.834757 9.65539C1.19383 10.9621 1.54918 13.3081 0.183594 15.1225C0.647315 15.0733 2.73104 14.7965 4.41499 13.6819L4.60638 13.5555L4.81429 13.6527C6.1115 14.2617 7.58359 14.5847 9.07173 14.5847C13.8699 14.5847 17.7743 11.3313 17.7743 7.33374Z" fill="white"/>
+                    </svg>
+                    Exclusive Articles
+                </a>
+                 </span>
             </div>
             <div class="col-4">
                 <img class="show-img" id="case1" src="/img/espn-fantasy-100734979-large.jpg" alt="">
