@@ -185,37 +185,19 @@ $(function(){
         $('.mobile-header, main.content').removeClass('push');
     });
 
-    /*=========================================================================
-     Counterup JS for facts
-     =========================================================================*/
-    $('.count').counterUp({
-      delay: 10,
-      time: 2000
-    });
-
-    /*=========================================================================
-     Progress bar animation with Waypoint JS
-     =========================================================================*/
-    if ($('.skill-item').length > 0) { 
-      var waypoint = new Waypoint({
-        element: document.getElementsByClassName('skill-item'),
-        handler: function(direction) {
-          
-          $('.progress-bar').each(function() {
-            var bar_value = $(this).attr('aria-valuenow') + '%';                
-            $(this).animate({ width: bar_value }, { easing: 'linear' });
-          });
-
-          this.destroy()
-        },
-        offset: '50%'
-      });
-    }
 
     /*=========================================================================
      One Page Scroll with jQuery
      =========================================================================*/
     $('.vertical-menu li a[href^="#"]:not([href="#"])').on('click', function(event) {
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top-50
+      }, 800, 'easeInOutQuad');
+      event.preventDefault();
+    });
+
+    $('#about > div > div.col-md-9 > a.btn.btn-border-light.btn-lg').on('click', function(event) {
       var $anchor = $(this);
       $('html, body').stop().animate({
         scrollTop: $($anchor.attr('href')).offset().top-50
@@ -254,7 +236,7 @@ $(function(){
     }
 
     /*=========================================================================
-            Scroll to Top
+    Scroll to Top
     =========================================================================*/
     $(window).scroll(function() {
         if ($(this).scrollTop() >= 250) {        // If page is scrolled more than 50px
