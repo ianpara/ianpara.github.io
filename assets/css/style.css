@@ -33,24 +33,26 @@ Description: Personal Portfolio & Resume HTML Template
 :root[color-mode="light"] {
   --text: #888;
   --text2: #000;
-  --bg: #F6F7FF;
-  --secondary:  #6666cc;
-  --element:  #FF5959;
-  --plain: #FFF;
+  --surface1: #F6F7FF;
+  --surface2: #FFF;
+  --primary: #6666cc;
+  --secondary: #FF5959;
+
 }
 
 :root[color-mode="dark"] {
-  --text: #888;
-  --text2: #000;
-  --bg: #333;
-  --secondary:  #6666cc;
-  --element:  #FF5959;
-  --plain: #40404;
+  --text: #e0e0e0;
+  --text2: #eee;
+  --surface1: #333;
+  --surface2: #404040;
+  --primary: #4747c2;
+  --secondary: #FF5959;
+
 }
 
 body {
-  color: #888;
-  background-color: var(--bg);
+  color: var(--text);
+  background-color: var(--surface1);
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 1.7;
@@ -81,7 +83,7 @@ img {
 }
 
 .text-dark {
-  color: #000 !important;
+  color: var(--text2) !important;
 }
 
 .relative {
@@ -102,7 +104,7 @@ img {
 }
 
 .background-blue {
-  background: #6666cc;
+  background: var(--primary);
 }
 
 /*=================================================================*/
@@ -114,7 +116,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #000;
+  color: var(--text2);
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   margin: 20px 0;
@@ -137,7 +139,7 @@ h4 {
 }
 
 a {
-  color: #000;
+  color: var(--text2);
   outline: 0;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -145,7 +147,7 @@ a {
 }
 
 a:hover {
-  color: #FF5959;
+  color: var(--secondary);
   text-decoration: none;
 }
 
@@ -182,12 +184,12 @@ pre {
 
 ::selection {
   color: #FFF;
-  background: #FF5959;
+  background: var(--secondary);
 }
 
 ::-moz-selection {
   color: #FFF;
-  background: #FF5959;
+  background: var(--secondary);
 }
 
 .z-1 {
@@ -278,7 +280,6 @@ pre {
 /*=================================================================*/
 header.left {
   color: #FFF;
-  background: #6666cc;
   border-radius: 20px;
   min-height: 620px;
   max-height: 620px;
@@ -341,7 +342,7 @@ header.left button.close {
   border: 0;
   -webkit-appearance: none;
   opacity: 1;
-  color: #FF5959;
+  color: var(--secondary);
   font-weight: 400;
   font-size: 16px;
   border-radius: 50%;
@@ -371,7 +372,7 @@ header .site-title {
 
 header .site-title.dot:after {
   content: "";
-  background-color: #FF5959;
+  background-color: var(--secondary);
   border-radius: 50%;
   display: inline-block;
   margin-left: 5px;
@@ -415,7 +416,7 @@ header .vertical-menu li a:hover {
 
 header .vertical-menu li a.active:before {
   content: "";
-  background: #FF5959;
+  background: var(--secondary);
   display: block;
   height: 18px;
   left: -30px;
@@ -445,7 +446,8 @@ label {
   cursor: pointer;
 }
 
-label:before, label:after {
+label:before,
+label:after {
   display: block;
   position: absolute;
   content: "";
@@ -471,18 +473,18 @@ input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"]:checked + label:before {
+input[type="checkbox"]:checked+label:before {
   background-color: #fff;
   transform: translateX(26px);
 }
 
-input[type="checkbox"]:checked + label:after {
+input[type="checkbox"]:checked+label:after {
   transform: translateX(53px) scale(1);
 }
 
 
 .mobile-header {
-  background: #6666cc;
+  background: var(--primary);
   border-radius: 20px;
   display: none;
   -webkit-transform: translateX(0);
@@ -516,7 +518,7 @@ input[type="checkbox"]:checked + label:after {
 
 .mobile-header .site-title.dot:after {
   content: "";
-  background-color: #FF5959;
+  background-color: var(--secondary);
   border-radius: 50%;
   display: inline-block;
   margin-left: 5px;
@@ -600,7 +602,7 @@ main.content.push {
 
 .hero h1 .dot:after {
   content: "";
-  background-color: #FF5959;
+  background-color: var(--secondary);
   border-radius: 50%;
   display: inline-block;
   margin-left: 5px;
@@ -622,7 +624,7 @@ section {
 }
 
 section.white-bg {
-  background: #FFF;
+  background: var(--surface2);
 }
 
 section.padding {
@@ -643,7 +645,7 @@ section.padding-60 {
 
 .section-title:after {
   content: "";
-  background: #FF5959;
+  background: var(--secondary);
   border-radius: 25px;
   display: block;
   height: 5px;
@@ -666,7 +668,7 @@ section.padding-60 {
 .skill-item li::after {
   content: " | ";
   font-weight: bold;
-  color: #FF5959;
+  color: var(--secondary);
 }
 
 .skill-item li:last-child::after {
@@ -704,8 +706,8 @@ section.padding-60 {
 }
 
 .service-item:hover {
-  border-color: #FF5959;
-  background: #FF5959;
+  border-color: var(--secondary);
+  background: var(--secondary);
   color: #FFF;
   -webkit-box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.15);
@@ -728,7 +730,7 @@ section.padding-60 {
   left: calc(20% + 2px);
   bottom: 0px;
   width: 1px;
-  background: #FF5959;
+  background: var(--secondary);
 }
 
 .timeline-line::before,
@@ -736,7 +738,7 @@ section.padding-60 {
   content: "";
   display: block;
   border-radius: 100%;
-  background: #FF5959;
+  background: var(--secondary);
   position: absolute;
   left: -3px;
   height: 7px;
@@ -777,8 +779,8 @@ section.padding-60 {
   position: absolute;
   width: 8px;
   height: 8px;
-  border: 1px solid #FF5959;
-  background-color: #fff;
+  border: 1px solid var(--secondary);
+  background-color: var(--surface2);
   border-radius: 100%;
   padding: 4.5px;
   top: 15%;
@@ -867,7 +869,7 @@ section.padding-60 {
 }
 
 .portfolio-item .plus-icon {
-  color: #FF5959;
+  color: var(--secondary);
   background: #FFF;
   border-radius: 100%;
   position: absolute;
@@ -886,7 +888,7 @@ section.padding-60 {
 }
 
 .portfolio-item .mask {
-  background: #FF5959;
+  background: var(--secondary);
   position: absolute;
   left: 0;
   top: 0;
@@ -940,7 +942,7 @@ section.padding-60 {
 }
 
 .portfolio-info i {
-  color: #FF5959;
+  color: var(--secondary);
   font-size: 14px;
   margin-right: 10px;
 }
@@ -950,7 +952,7 @@ section.padding-60 {
 }
 
 .portfolio-filter li {
-  color: #888;
+  color: var(--text);
   cursor: pointer;
   font-size: 14px;
   font-weight: 400;
@@ -958,7 +960,7 @@ section.padding-60 {
 }
 
 .portfolio-filter li:hover {
-  color: #000;
+  color: var(--text2);
 }
 
 .portfolio-filter li:hover:after {
@@ -966,7 +968,7 @@ section.padding-60 {
 }
 
 .portfolio-filter li.current {
-  background: #FF5959;
+  background: var(--secondary);
   color: #FFF;
   padding: 6px 14px 4px;
   border-radius: 30px;
@@ -982,19 +984,21 @@ section.padding-60 {
   width: 875px;
 }
 
-.portfolio-modal img{
+.portfolio-modal img {
   border-radius: 15px;
-  
+
 }
 
 .contact-info i {
   font-size: 24px;
-  color: #FF5959;
+  color: var(--secondary);
   float: left;
 }
+
 .contact-info .details {
   margin-left: 40px;
 }
+
 .contact-info .details h5 {
   font-size: 16px;
   margin: 0 0 5px;
@@ -1005,7 +1009,7 @@ section.padding-60 {
 /*=================================================================*/
 .overlay {
   border-radius: 20px;
-  background: #6666cc;
+  background: var(--primary);
   left: 0;
   top: 0;
   opacity: 0.9;
@@ -1018,7 +1022,7 @@ section.padding-60 {
   font-size: 24px;
   color: #FFF;
   display: inline-block;
-  background: #FF5959;
+  background: var(--secondary);
   border-radius: 50%;
   height: 50px;
   line-height: 50px;
@@ -1027,7 +1031,7 @@ section.padding-60 {
 }
 
 .icon-simple {
-  color: #FF5959;
+  color: var(--secondary);
   font-size: 24px;
 }
 
@@ -1087,11 +1091,11 @@ section.padding-60 {
 
 .btn-default {
   color: #FFF;
-  background: #FF5959;
+  background: var(--secondary);
 }
 
 .btn-default:hover {
-  background: #6666cc;
+  background: var(--primary);
   color: #FFF;
   -webkit-transform: translateY(-3px);
   -moz-transform: translateY(-3px);
@@ -1105,12 +1109,12 @@ section.padding-60 {
 
 .btn-alt {
   color: #FFF;
-  background: #6666cc;
+  background: var(--primary);
 }
 
 .btn-alt:hover {
   color: #FFF;
-  background: #FF5959;
+  background: var(--secondary);
   -webkit-transform: translateY(-3px);
   -moz-transform: translateY(-3px);
   -ms-transform: translateY(-3px);
@@ -1128,7 +1132,7 @@ section.padding-60 {
 
 .btn-border:hover {
   color: #FFF;
-  background: #000;
+  background: var(--text2);
 }
 
 .btn-border-light {
@@ -1138,7 +1142,7 @@ section.padding-60 {
 }
 
 .btn-border-light:hover {
-  color: #000;
+  color: var(--text2);
   background: #FFF;
   -webkit-transform: translateY(-3px);
   -moz-transform: translateY(-3px);
@@ -1177,7 +1181,7 @@ section.padding-60 {
 /*                     PRELOADER
 /*=================================================================*/
 #preloader {
-  background: #F6F7FF;
+  background: var(--surface1);
   height: 100%;
   position: fixed;
   width: 100%;
@@ -1208,7 +1212,7 @@ section.padding-60 {
   display: inline-block;
   position: absolute;
   top: 0;
-  background-color: #FF5959;
+  background-color: var(--secondary);
   border-radius: 100%;
   -webkit-animation: sk-bounce 2s infinite ease-in-out;
   animation: sk-bounce 2s infinite ease-in-out;
@@ -1269,7 +1273,7 @@ section.padding-60 {
 
 .social-icons li a {
   color: #FFF;
-  background: #FF5959;
+  background: var(--secondary);
   border-radius: 50%;
   display: block;
   height: 30px;
@@ -1279,7 +1283,7 @@ section.padding-60 {
 }
 
 .social-icons li a:hover {
-  color: #FF5959;
+  color: var(--secondary);
   background: #FFF;
 }
 
@@ -1288,7 +1292,7 @@ section.padding-60 {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #000;
+  background: var(--text2);
   background: rgba(0, 0, 0, 0.3);
   width: 40px;
   height: 40px;
@@ -1321,7 +1325,7 @@ section.padding-60 {
 }
 
 #return-to-top:hover {
-  background: #FF5959;
+  background: var(--secondary);
 }
 
 .rounded {
@@ -1329,7 +1333,7 @@ section.padding-60 {
 }
 
 .background-white {
-  background: #FFF;
+  background: var(--surface2);
 }
 
 /*=================================================================*/
@@ -1386,6 +1390,11 @@ section.padding-60 {
 
   .portfolio-modal {
     width: 100%;
+  }
+
+  .close:not(:disabled):not(.disabled):focus,
+  .close:not(:disabled):not(.disabled):hover {
+    color: var(--text2);
   }
 
 }
