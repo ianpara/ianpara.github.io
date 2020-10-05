@@ -7,11 +7,6 @@ $(window).on("load", function () {
 
 
   /*=========================================================================
-      Custom Scrollbar
-  =========================================================================*/
-  $(".header-inner").mCustomScrollbar();
-
-  /*=========================================================================
   Set darkmode via OS or local storage
   =========================================================================*/
   if (
@@ -25,7 +20,7 @@ $(window).on("load", function () {
   }
 
   /*=========================================================================
-  Isotope
+  Isotope - gallery formatting
   =========================================================================*/
   var $container = $('.portfolio-wrapper');
   $container.imagesLoaded(function () {
@@ -41,10 +36,12 @@ $(window).on("load", function () {
   });
 });
 
-
 $(function () {
   "use strict";
 
+  /*=========================================================================
+  Toggle menu on mobile
+  =========================================================================*/
   $('.menu-icon').on('click', function () {
     $('header.left').toggleClass('open');
     $('.mobile-header, main.content').toggleClass('push');
@@ -59,13 +56,13 @@ $(function () {
   /*=========================================================================
   One Page Scroll with jQuery
   =========================================================================*/
-  var x = window.matchMedia("(max-width: 992px)");
+  var x = window.matchMedia("(max-width: 576px)");
 
   if (x.matches) { // If media query matches
     $('.vertical-menu li a[href^="#"]:not([href="#"])').on('click', function (event) {
       var $anchor = $(this);
       $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top
+        scrollTop: $($anchor.attr('href')).offset().top - 20
       }, 800, 'easeInOutQuad');
       event.preventDefault();
     });
@@ -78,7 +75,7 @@ $(function () {
       event.preventDefault();
     });
   }
-  
+
 
   /*=========================================================================
   Add (nav-link) class to main menu.

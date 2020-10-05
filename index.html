@@ -49,7 +49,7 @@
 		</div>
 
 		<!-- header -->
-		<header class="left float-left background-blue shadow-dark" id="header">
+		<header class="left float-left background-blue shadow-dark" id="header" z-index="3">
 			<button type="button" class="close" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 			</button>
@@ -60,7 +60,7 @@
 				<!-- navigation menu -->
 				<nav>
 					<ul class="vertical-menu scrollspy">
-						<li><a href="#about"><i class="icon-user"></i>About</a></li>
+						<li><a class="nav-link" href="#about"><i class="icon-user"></i>About</a></li>
 						<li><a href="#skills"><i class="icon-bulb"></i>Skills</a></li>
 						<li><a href="#resume"><i class="icon-graduation"></i>Resume</a></li>
 						<li><a href="#works"><i class="icon-grid"></i>Works</a></li>
@@ -253,15 +253,14 @@
 							</div>
 							<span class="plus-icon">+</span>
 							<div class="thumb">
-								<img src="assets/images/airline-crop.PNG" alt="Portfolio-title" />
+								<img src="assets/images/airline-crop.PNG" alt="Portfolio Flight Finder" />
 								<div class="mask"></div>
 							</div>
 						</div>
 					</div>
 
 					<!-- portfolio item -->
-					<div class="col-md-4 col-sm-6 grid-item" data-toggle="modal"
-						data-target="#gladModal">
+					<div class="col-md-4 col-sm-6 grid-item" data-toggle="modal" data-target="#gladModal">
 						<div class="portfolio-item">
 							<div class="details">
 								<h4 class="title">Gladiator</h4>
@@ -269,7 +268,7 @@
 							</div>
 							<span class="plus-icon">+</span>
 							<div class="thumb">
-								<img src="assets/images/glad-crop.PNG" alt="Portfolio-title" />
+								<img src="assets/images/glad-crop.PNG" alt="Portfolio Gladiator" />
 								<div class="mask"></div>
 							</div>
 						</div>
@@ -284,7 +283,7 @@
 							</div>
 							<span class="plus-icon">+</span>
 							<div class="thumb">
-								<img src="assets/images/knowledge-crop.PNG" alt="Portfolio-title" />
+								<img src="assets/images/knowledge-crop.PNG" alt="Portfolio Knowledge Clicker" />
 								<div class="mask"></div>
 							</div>
 						</div>
@@ -300,15 +299,14 @@
 							</div>
 							<span class="plus-icon">+</span>
 							<div class="thumb">
-								<img src="assets/images/music-crop.PNG" alt="Portfolio-title" />
+								<img src="assets/images/music-crop.PNG" alt="Portfolio Music with Friends" />
 								<div class="mask"></div>
 							</div>
 						</div>
 					</div>
 
 					<!-- portfolio item -->
-					<div class="col-md-4 col-sm-6 grid-item" data-toggle="modal"
-						data-target="#weatherModal">
+					<div class="col-md-4 col-sm-6 grid-item" data-toggle="modal" data-target="#weatherModal">
 						<div class="portfolio-item">
 							<div class="details">
 								<h4 class="title">Weather Web App</h4>
@@ -316,15 +314,14 @@
 							</div>
 							<span class="plus-icon">+</span>
 							<div class="thumb">
-								<img src="assets/images/weather-crop.PNG" alt="Portfolio-title" />
+								<img src="assets/images/weather-crop.PNG" alt="Portfolio Weather Web App" />
 								<div class="mask"></div>
 							</div>
 						</div>
 					</div>
 
 					<!-- portfolio item -->
-					<div class="col-md-4 col-sm-6 grid-item" data-toggle="modal"
-						data-target="#ventiModal">
+					<div class="col-md-4 col-sm-6 grid-item" data-toggle="modal" data-target="#ventiModal">
 						<div class="portfolio-item">
 							<div class="details">
 								<h4 class="title">Venti Web Design & Development</h4>
@@ -332,7 +329,8 @@
 							</div>
 							<span class="plus-icon">+</span>
 							<div class="thumb">
-								<img src="assets/images/venti-crop.png" alt="Portfolio-title" />
+								<img src="assets/images/venti-crop.png"
+									alt="Portfolio Venti Web Design & Development" />
 								<div class="mask"></div>
 							</div>
 						</div>
@@ -377,7 +375,7 @@
 		</main>
 
 		<!-- Airplane Modal -->
-		<div class="modal" id="airlineModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		<div class="modal" id="airlineModal" tabindex="-1" role="dialog" aria-labelledby="airlineModalLabel"
 			aria-hidden="true" style="padding-right:0;">
 			<div class=" portfolio-modal background-white rounded padding-50 shadow-dark mx-auto" role="document">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -394,21 +392,25 @@
 				<div class="spacer" data-height="40" style="height: 40px;"></div>
 
 				<!-- portfolio image -->
-				<img class="shadow-dark" src="assets/images/airline-border.PNG" alt="Portfolio-title">
+				<img class="shadow-dark" src="assets/images/airline-border.PNG" alt="Flight Finder Modal">
 
 				<!-- portfolio content -->
 				<div class="portfolio-content mt-5">
 					<h3>Overview</h3>
-					<p><span class="strong">Goal:</span> School project where we were to use AGILE software development to create and finish a software product.</p>
-					<p><span class="strong">What we did:</span> Create a site in which a user can input their departure location, arrival location, and certain dates then view/buy airline tickets. I did the frontend design and communication between the backend and frontend.</p>
-					<p><span class="strong">What I learned:</span> Learned AGILE software development, better understanding of SQL queries, better understanding of using PHP.</p>
+					<p><span class="strong">Goal:</span> School project where we were to use AGILE software development
+						to create and finish a software product.</p>
+					<p><span class="strong">What we did:</span> Create a site in which a user can input their departure
+						location, arrival location, and certain dates then view/buy airline tickets. I did the frontend
+						design and communication between the backend and frontend.</p>
+					<p><span class="strong">What I learned:</span> Learned AGILE software development, better
+						understanding of SQL queries, better understanding of using PHP.</p>
 					<p><span class="strong">Tools:</span> HTML, CSS, JavaScript, PHP, Cloud9, SQL</p>
 				</div>
 			</div>
 		</div>
 
 		<!-- Glad Modal -->
-		<div class="modal" id="gladModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		<div class="modal" id="gladModal" tabindex="-1" role="dialog" aria-labelledby="gladModalLabel"
 			aria-hidden="true" style="padding-right:0;">
 			<div class=" portfolio-modal background-white rounded padding-50 shadow-dark mx-auto" role="document">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -425,21 +427,28 @@
 				<div class="spacer" data-height="40" style="height: 40px;"></div>
 
 				<!-- portfolio image -->
-				<img class="shadow-dark" src="assets/images/glad-border.PNG" alt="Portfolio-title">
+				<img class="shadow-dark" src="assets/images/glad-border.PNG" alt="Gladiator Modal">
 
 				<!-- portfolio content -->
 				<div class="portfolio-content mt-5">
 					<h3>Overview</h3>
-					<p><span class="strong">Goal:</span> Create a mood swing detector with a library of jokes, which can cheer up people, when such swing occurs. Moods that we are interested in are – Normal, Cheerful, Angry, Depressed</p>
-					<p><span class="strong">What we did:</span> Created a web app where someone can speak to the app and the app will be able to detect that person’s mood. If angry the app will display a breathing exercise or if depressed the app will display a joke. I created the frontend design, implemented the backend that analyzed the users voice, and wrote up the README to get the project working locally.</p>
-					<p><span class="strong">What I learned:</span> How to be a team leader, much stronger understanding of Python, dipped my toes in convolutional neural networks.</p>
+					<p><span class="strong">Goal:</span> Create a mood swing detector with a library of jokes, which can
+						cheer up people, when such swing occurs. Moods that we are interested in are – Normal, Cheerful,
+						Angry, Depressed</p>
+					<p><span class="strong">What we did:</span> Created a web app where someone can speak to the app and
+						the app will be able to detect that person’s mood. If angry the app will display a breathing
+						exercise or if depressed the app will display a joke. I created the frontend design, implemented
+						the backend that analyzed the users voice, and wrote up the README to get the project working
+						locally.</p>
+					<p><span class="strong">What I learned:</span> How to be a team leader, much stronger understanding
+						of Python, dipped my toes in convolutional neural networks.</p>
 					<p><span class="strong">Tools:</span> HTML, CSS, JavaScript, Python, SQL</p>
 				</div>
 			</div>
 		</div>
 
 		<!-- Know Modal -->
-		<div class="modal" id="knowModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		<div class="modal" id="knowModal" tabindex="-1" role="dialog" aria-labelledby="knowModalLabel"
 			aria-hidden="true" style="padding-right:0;">
 			<div class=" portfolio-modal background-white rounded padding-50 shadow-dark mx-auto" role="document">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -456,22 +465,26 @@
 				<div class="spacer" data-height="40" style="height: 40px;"></div>
 
 				<!-- portfolio image -->
-				<img class="shadow-dark" src="assets/images/knowledge-border.PNG" alt="Portfolio-title">
+				<img class="shadow-dark" src="assets/images/knowledge-border.PNG" alt="Knowledge Clicker Modal">
 
 				<!-- portfolio content -->
 				<div class="portfolio-content mt-5">
 					<h3>Overview</h3>
-					<p><span class="strong">Goal:</span> School project to learn to work in a group and design and create a
+					<p><span class="strong">Goal:</span> School project to learn to work in a group and design and
+						create a
 						software product.</p>
-					<p><span class="strong">What we did:</span> Created an online "clicker" game, where you click to gain knowledge and unlock upgrades to get more knowledge. I was tasked with implementing the upgrade system.</p>
-					<p><span class="strong">What I learned:</span> Learned to succesfully work in a group to create an idea and execute.</p>
+					<p><span class="strong">What we did:</span> Created an online "clicker" game, where you click to
+						gain knowledge and unlock upgrades to get more knowledge. I was tasked with implementing the
+						upgrade system.</p>
+					<p><span class="strong">What I learned:</span> Learned to succesfully work in a group to create an
+						idea and execute.</p>
 					<p><span class="strong">Tools:</span> HTML, CSS, JavaScript, C#, ASP.net</p>
 				</div>
 			</div>
 		</div>
 
 		<!-- Music Modal -->
-		<div class="modal" id="musicModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		<div class="modal" id="musicModal" tabindex="-1" role="dialog" aria-labelledby="musicModalLabel"
 			aria-hidden="true" style="padding-right:0;">
 			<div class=" portfolio-modal background-white rounded padding-50 shadow-dark mx-auto" role="document">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -488,21 +501,25 @@
 				<div class="spacer" data-height="40" style="height: 40px;"></div>
 
 				<!-- portfolio image -->
-				<img class="shadow-dark" src="assets/images/music-border.PNG" alt="Portfolio-title">
+				<img class="shadow-dark" src="assets/images/music-border.PNG" alt="Music With Friends Modal">
 
 				<!-- portfolio content -->
 				<div class="portfolio-content mt-5">
 					<h3>Overview</h3>
-					<p><span class="strong">Goal:</span> School project where we had to implement a project on a remote server.</p>
-					<p><span class="strong">What we did:</span> Created a social site where users can make a room, upload their own music and listen to that music with others. I helped create the user registration and deployed project on server.</p>
-					<p><span class="strong">What I learned:</span> Better understood the Model-view-controller framework. Learned to use a LAMP stack server.</p>
+					<p><span class="strong">Goal:</span> School project where we had to implement a project on a remote
+						server.</p>
+					<p><span class="strong">What we did:</span> Created a social site where users can make a room,
+						upload their own music and listen to that music with others. I helped create the user
+						registration and deployed project on server.</p>
+					<p><span class="strong">What I learned:</span> Better understood the Model-view-controller
+						framework. Learned to use a LAMP stack server.</p>
 					<p><span class="strong">Tools:</span> HTML, CSS, C#, ASP.net, Google Cloud, SQL</p>
 				</div>
 			</div>
 		</div>
 
 		<!-- Weather Modal -->
-		<div class="modal" id="weatherModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		<div class="modal" id="weatherModal" tabindex="-1" role="dialog" aria-labelledby="weatherModalLabel"
 			aria-hidden="true" style="padding-right:0;">
 			<div class=" portfolio-modal background-white rounded padding-50 shadow-dark mx-auto" role="document">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -518,22 +535,27 @@
 				<div class="spacer" data-height="40" style="height: 40px;"></div>
 
 				<!-- portfolio image -->
-				<img class="shadow-dark" src="assets/images/weather-border.PNG" alt="Portfolio-title">
+				<img class="shadow-dark" src="assets/images/weather-border.PNG" alt="Weather Web App Modal">
 
 				<!-- portfolio content -->
 				<div class="portfolio-content mt-5">
 					<h3>Overview</h3>
-					<p><span class="strong">Goal:</span> Personal project to brush-up on vanilla JavaScript, better understand JSON APIs, and use
+					<p><span class="strong">Goal:</span> Personal project to brush-up on vanilla JavaScript, better
+						understand JSON APIs, and use
 						neumorphism design.</p>
-					<p><span class="strong">What I did:</span> Created a website that pulls in weather info for a specified city. Used the ever popular <a class="link" href="https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6" target="_blank">neumorphism</a> for the user interface.</p>
-					<p><span class="strong">What I learned:</span> APIs are a wonderful thing and are fun to work with. Neumorphism design is hard to implement in a way that is works well for the user experience.</p>
+					<p><span class="strong">What I did:</span> Created a website that pulls in weather info for a
+						specified city. Used the ever popular <a class="link"
+							href="https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6"
+							target="_blank">neumorphism</a> for the user interface.</p>
+					<p><span class="strong">What I learned:</span> APIs are a wonderful thing and are fun to work with.
+						Neumorphism design is hard to implement in a way that is works well for the user experience.</p>
 					<p><span class="strong">Tools:</span> HTML, CSS, JS, JSON</p>
 				</div>
 			</div>
 		</div>
 
 		<!-- Venti Modal -->
-		<div class="modal" id="ventiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		<div class="modal" id="ventiModal" tabindex="-1" role="dialog" aria-labelledby="ventiModalLabel"
 			aria-hidden="true" style="padding-right:0;">
 			<div class=" portfolio-modal background-white rounded padding-50 shadow-dark mx-auto" role="document">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -549,14 +571,20 @@
 				<div class="spacer" data-height="40" style="height: 40px;"></div>
 
 				<!-- portfolio image -->
-				<img class="shadow-dark" src="assets/images/venti-border.png" alt="Portfolio-title">
+				<img class="shadow-dark" src="assets/images/venti-border.png"
+					alt="Venti Web Design & Development Modal">
 
 				<!-- portfolio content -->
 				<div class="portfolio-content mt-5">
 					<h3>Overview</h3>
-					<p><span class="strong">Goal:</span> Create a website to showcase my web development skills and promote my freelance business.</p>
-					<p><span class="strong">What I did:</span> Created a PHP backend website and my own CMS system for blog publishing.</p>
-					<p><span class="strong">What I learned:</span> Why create my own CMS? WordPress was too bloated for my needs and I wanted to use my own design for my blog pages. Using a MySQL database I created an easy to use CMS for publishing blogs. Better understood SEO for this site including using keywords and implementing accessibility best practices. </p>
+					<p><span class="strong">Goal:</span> Create a website to showcase my web development skills and
+						promote my freelance business.</p>
+					<p><span class="strong">What I did:</span> Created a PHP backend website and my own CMS system for
+						blog publishing.</p>
+					<p><span class="strong">What I learned:</span> Why create my own CMS? WordPress was too bloated for
+						my needs and I wanted to use my own design for my blog pages. Using a MySQL database I created
+						an easy to use CMS for publishing blogs. Better understood SEO for this site including using
+						keywords and implementing accessibility best practices. </p>
 					<p><span class="strong">Tools</span>: HTML, CSS, JavaScript, PHP, MySQL</p>
 				</div>
 			</div>
@@ -573,7 +601,6 @@
 	<script src="assets/js/popper.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery.waypoints.min.js"></script>
-	<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="assets/js/isotope.pkgd.min.js"></script>
 	<script src="assets/js/infinite-scroll.min.js"></script>
 	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
