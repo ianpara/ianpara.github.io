@@ -591,6 +591,7 @@ main.content.push {
   -ms-transform: translateX(295px);
   -o-transform: translateX(295px);
   transform: translateX(295px);
+  touch-action: none;
 }
 
 .hero {
@@ -997,6 +998,7 @@ section.padding-60 {
   margin-bottom: 50px;
   width: 875px;
 }
+
 .fade-scale {
   transform: scale(0);
   opacity: 0;
@@ -1413,7 +1415,7 @@ section.padding-60 {
     width: 100%;
   }
 
-  
+
   .portfolio-modal button.close {
     color: var(--text2) !important;
   }
