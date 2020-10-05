@@ -5,13 +5,14 @@ $(window).on("load", function () {
   =========================================================================*/
   $("#preloader").delay(350).fadeOut('slow');
 
+
   /*=========================================================================
       Custom Scrollbar
   =========================================================================*/
   $(".header-inner").mCustomScrollbar();
 
   /*=========================================================================
-  Set darkmode
+  Set darkmode via OS or local storage
   =========================================================================*/
   if (
     localStorage.getItem('color-mode') === 'dark' || (window.matchMedia('(prefers-color-scheme: dark)').matches &&
@@ -24,8 +25,8 @@ $(window).on("load", function () {
   }
 
   /*=========================================================================
-   Isotope
-   =========================================================================*/
+  Isotope
+  =========================================================================*/
   var $container = $('.portfolio-wrapper');
   $container.imagesLoaded(function () {
     $('.portfolio-wrapper').isotope({
@@ -40,55 +41,6 @@ $(window).on("load", function () {
   });
 });
 
-/*=========================================================================
-            Carousels
-=========================================================================*/
-$(document).on('ready', function () {
-  "use strict";
-
-  $('.testimonials-wrapper').slick({
-    dots: true,
-    arrows: false,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: false,
-      }
-    }]
-  });
-
-  $('.clients-wrapper').slick({
-    dots: false,
-    arrows: false,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [{
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          dots: false,
-          arrows: false,
-        }
-      },
-      {
-        breakpoint: 425,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false,
-          arrows: false,
-        }
-      }
-    ]
-  });
-
-});
 
 $(function () {
   "use strict";
@@ -105,50 +57,45 @@ $(function () {
 
 
   /*=========================================================================
-   One Page Scroll with jQuery
-   =========================================================================*/
-  $('.vertical-menu li a[href^="#"]:not([href="#"])').on('click', function (event) {
-    var $anchor = $(this);
-    $('html, body').stop().animate({
-      scrollTop: $($anchor.attr('href')).offset().top - 50
-    }, 800, 'easeInOutQuad');
-    event.preventDefault();
-  });
+  One Page Scroll with jQuery
+  =========================================================================*/
+  var x = window.matchMedia("(max-width: 992px)");
 
-  $('#about > div > div.col-md-9 > a.btn.btn-border-light.btn-lg').on('click', function (event) {
-    var $anchor = $(this);
-    $('html, body').stop().animate({
-      scrollTop: $($anchor.attr('href')).offset().top - 50
-    }, 800, 'easeInOutQuad');
-    event.preventDefault();
-  });
+  if (x.matches) { // If media query matches
+    $('.vertical-menu li a[href^="#"]:not([href="#"])').on('click', function (event) {
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top
+      }, 800, 'easeInOutQuad');
+      event.preventDefault();
+    });
+  } else {
+    $('.vertical-menu li a[href^="#"]:not([href="#"])').on('click', function (event) {
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top - 50
+      }, 800, 'easeInOutQuad');
+      event.preventDefault();
+    });
+  }
+  
 
   /*=========================================================================
-   Add (nav-link) class to main menu.
-   =========================================================================*/
+  Add (nav-link) class to main menu.
+  =========================================================================*/
   $('.vertical-menu li a').addClass('nav-link');
 
   /*=========================================================================
-   Bootstrap Scrollspy
-   =========================================================================*/
+  Bootstrap Scrollspy
+  =========================================================================*/
   $("body").scrollspy({
     target: ".scrollspy",
     offset: 50
   });
 
   /*=========================================================================
-   Background Image with Data Attribute
-   =========================================================================*/
-  var bg_img = document.getElementsByClassName('background');
-
-  for (var i = 0; i < bg_img.length; i++) {
-    var src = bg_img[i].getAttribute('data-image-src');
-    bg_img[i].style.backgroundImage = "url('" + src + "')";
-  }
-
-  /*=========================================================================
-   Spacer with Data Attribute
-   =========================================================================*/
+  Spacer with Data Attribute
+  =========================================================================*/
   var list = document.getElementsByClassName('spacer');
 
   for (var i = 0; i < list.length; i++) {
@@ -173,8 +120,8 @@ $(function () {
   });
 
   /*=========================================================================
-   Darkmode Toggle
-   =========================================================================*/
+  Darkmode Toggle
+  =========================================================================*/
   $('input[type="checkbox"]').click(function () {
     if ($(this).is(":checked")) {
       document.documentElement.setAttribute("color-mode", "dark");
