@@ -32,7 +32,7 @@
 
   <nav class="navbar navbar-dark">
     <a class="navbar-brand" href="#">
-      <img src="/images/IP - white.png" width="30" height="30" alt="" loading="lazy">
+      <img src="../assets/images/IP - white.png" width="30" height="30" alt="" loading="lazy">
     </a>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item"><a class="nav-link" href="/tools"><i style="padding-right: 10px;" class="fas fa-angle-left"></i>Back</a></li>
@@ -88,7 +88,17 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="/tools/tools.js"></script>
-<script src="/assets/js/custom.js"></script>
+<script>
+  function modeToggle() {
+      localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ?'light' : 'dark'); 
+      if (localStorage.getItem('mode') === 'dark') {
+        document.querySelector('body').classList.add('dark')
+      } else {
+        document.querySelector('body').classList.remove('dark');
+      }
+
+}
+  </script>
 
 </body>
 

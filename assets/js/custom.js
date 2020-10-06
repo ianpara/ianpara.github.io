@@ -76,6 +76,14 @@ $(function () {
     });
   }
 
+  $('#about > div > div.col-md-9 > a.btn.btn-border-light.btn-lg').on('click', function (event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+      scrollTop: $($anchor.attr('href')).offset().top - 50
+    }, 800, 'easeInOutQuad');
+    event.preventDefault();
+  });
+
 
   /*=========================================================================
   Add (nav-link) class to main menu.
