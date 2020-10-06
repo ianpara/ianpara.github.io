@@ -512,6 +512,7 @@ input[type="checkbox"]:checked+label:after {
   -ms-transform: translateX(295px);
   -o-transform: translateX(295px);
   transform: translateX(295px);
+  touch-action: none;
 }
 
 .mobile-header .logo img {
