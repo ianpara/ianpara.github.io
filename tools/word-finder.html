@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Mass Open - Webtools</title>
+
+  <!-- favivon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=7k4LwR2Olv">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=7k4LwR2Olv">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=7k4LwR2Olv">
+  <link rel="manifest" href="/site.webmanifest?v=7k4LwR2Olv">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=7k4LwR2Olv" color="#5bbad5">
+  <link rel="shortcut icon" href="/favicon.ico?v=7k4LwR2Olv">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- Bootstrap core CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Custom -->
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/45c0dc351a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <a class="mode-btn" id="dark-mode" onclick="modeToggle()">
+    <i class="far fa-lightbulb fa-lg"></i>
+  </a>
+
+  <nav class="navbar navbar-dark">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/images/IP - white.png" width="30" height="30" alt="" loading="lazy">
+    </a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a class="nav-link" href="/tools"><i style="padding-right: 10px;" class="fas fa-angle-left"></i>Back</a></li>
+    </ul>
+  </nav>
+</body><br>
+<main class="container" role="main">
+  <h1>Find Word in URL List</h1>
+  <p class="font-weight-light">What this does: find a certain word in a list of URLs.</p>
+  <form action="javascript:test()" method="POST" id="form">
+    <div class="form-group">
+      <label for="base_url">Base URL</label>
+      <input class="form-control" type="text" name="baseUrl" placeholder="https://www.website.com/">
+    </div>
+    <div class="form-group">
+      <label for="path_list">Path List</label>
+      <textarea class="form-control"  name="pathList" placeholder="Path List" style="height:200px;"></textarea>
+      <small class="form-text text-muted">Max of 15 paths</small>
+    </div>
+    <div class="form-group">
+        <label for="searchWord">Word to Find</label>
+        <input class="form-control" type="text" name="searchWord" placeholder="Text">
+    </div>
+
+    <button class="btn" type="submit">Open URLs</button>
+  </form>
+  <p id="text"></p>
+</main>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="/tools/tools.js"></script>
+<script lang="javascript">
+function test() {
+    
+    var myLoc = window.prompt('Please enter a web site address', 'http://');
+    getHttp =   myLoc.substring(0, 7);
+
+    if ( getHttp == "http://")
+    {
+    finalUrl = myLoc;
+    } else {
+    finalUrl = 'http://' + myLoc;
+    }
+
+    window.location = 'view-source:' + finalUrl;
+}
+
+  function modeToggle() {
+      localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ?'light' : 'dark'); 
+      if (localStorage.getItem('mode') === 'dark') {
+        document.querySelector('body').classList.add('dark')
+      } else {
+        document.querySelector('body').classList.remove('dark');
+      }
+
+}
+  </script>
+</html>

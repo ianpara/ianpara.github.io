@@ -1,222 +1,35 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en-US" color-mode="light">
 
 <head>
-  <title>Ian Paraventi</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Ian Paraventi</title>
+	<meta name="description" content="Ian Paraventi's Personal Portfolio">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!-- Flickity CSS -->
- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-  
-  <!-- custom -->
-  <link rel="stylesheet" href="assets/css/custom.css" />
+	<!-- favivon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=7k4LwR2Olv">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=7k4LwR2Olv">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=7k4LwR2Olv">
+	<link rel="manifest" href="/site.webmanifest?v=7k4LwR2Olv">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg?v=7k4LwR2Olv" color="#5bbad5">
+	<link rel="shortcut icon" href="/favicon.ico?v=7k4LwR2Olv">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="theme-color" content="#ffffff">
 
-  <!-- Font awesome -->
-  <script src="https://kit.fontawesome.com/45c0dc351a.js" crossorigin="anonymous"></script>
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/simple-line-icons.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
-<<<<<<< Updated upstream
-<body class="">
-
-  <a class="mode-btn" id="dark-mode" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')">
-    <i class="fas fa-lightbulb"></i>
-  </a>
-
-  <div class="container" id="main">
-
-    <!-- Intro -->
-    <section class="container main section" id="intro">
-      <div class="spotlight">
-        <div class="content">
-          <header class="major">
-            <h2>Hi, I'm Ian Paraventi...</h2>
-          </header>
-          <p>A senior attending Oakland University, majoring in Information Technology. I have loved computers since I was a kid, so I decided to make a career out of my passion. I started programming in high school and never looked back. I am always ready to tackle new problems and expand my knowledge.</p>
-        </div>
-        <span class="image"><img src="assets/images/headshot.png" alt="me" /></span>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="d-flex justify-content-center container main section" id="skills">
-      <div class="skills">
-        <div class="content">
-          <header class="major">
-            <h2>My Skills</h2>
-          </header>
-          <ul class="list-inline">
-            <h5 class="d-block d-md-inline mr-2">Web</h5>
-            <li class="list-inline-item">HTML</li>
-            <li class="list-inline-item">CSS</li>
-            <li class="list-inline-item">JavaScript</li>
-          </ul>
-          <ul class="list-inline">
-            <h5 class="d-block d-md-inline mr-2">Database</h5>
-            <li class="list-inline-item">MySQL</li>
-            <li class="list-inline-item">SQLite</li>
-          </ul>
-          <ul class="list-inline">
-            <h5 class="d-block d-md-inline mr-2">Development</h5>
-            <li class="list-inline-item">Java</li>
-            <li class="list-inline-item">Python</li>
-            <li class="list-inline-item">C++</li>
-          </ul>
-          <ul class="list-inline">
-            <h5 class="d-block d-md-inline mr-2">Tools</h5>
-            <li class="list-inline-item">Atom</li>
-            <li class="list-inline-item">Visual Studio</li>
-            <li class="list-inline-item">Photoshop</li>
-          </ul>
-          <ul class="list-inline">
-            <h5 class="d-block d-md-inline mr-2">Operating Systems</h5>
-            <li class="list-inline-item">Windows</li>
-            <li class="list-inline-item">Linux</li>
-          </ul>
-          <a href="assets/docs/resume-helpdesk.pdf" class="btn btn-outline-primary" target="_blank">View Resume</a>
-        </div>
-      </div>
-    </section>
-
-      <!-- Project -->
-      <section class="justify-content-center container main section" id="projects">
-        <div class="projects">
-          <div class="content">
-          <header class="major">
-            <h2>My Projects</h2>
-          </header>
-      
-          <div class="main-carousel">
-      
-          
-            <div class="card border-dark carousel-cell">
-              <div class="card-image">
-              <img class="activator" src="assets/images/knowledge.PNG">
-              </div>
-              <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Knowledge Clicker<i class="fas fa-info-circle" aria-label="More Info"></i></span>
-              <p class="card-text">A simple "clicker game".</p>
-      
-              </div>
-              <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Knowledge Clicker<i class="fas fa-times" aria-label="Close"></i></span>
-              <p class="info-content">Goal: Learn to work in a group to design and create a software product.</p>
-              <p class="info-content">Tools: HTML, CSS, JavaScript, C#, ASP.net, Visual Studio</p>
-              <a class="btn btn-outline-primary" href="http://knowledgeclicker.azurewebsites.net/Default.aspx" target="_blank">View Project</a>
-              </div>
-            </div>
-            
-      
-            
-            <div class="card border-dark carousel-cell">
-              <div class="card-image">
-              <img class="activator" src="assets/images/music.PNG">
-              </div>
-              <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Music With Friends<i class="fas fa-info-circle" aria-label="More Info"></i></span>
-              <p class="card-text">Create a room, upload music and listen to that music with others.</p>
-      
-              </div>
-              <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Music With Friends<i class="fas fa-times" aria-label="Close"></i></span>
-              <p class="info-content">Goal: Group prject where we had to implement a project on a remote server.</p>
-              <p class="info-content">Tools: HTML, CSS, PHP, C#, ASP.net, Visual Studio, Google Cloud, SQL</p>
-              <a class="btn btn-outline-primary" href="https://github.com/ianpara/musicwithfriends" target="_blank">View Project</a>
-              </div>
-            </div>
-            
-      
-            
-            <div class="card border-dark carousel-cell">
-              <div class="card-image">
-              <img class="activator" src="assets/images/airline.PNG">
-              </div>
-              <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Flight Finder<i class="fas fa-info-circle" aria-label="More Info"></i></span>
-              <p class="card-text">Search for and purchase a ticket for a flight.</p>
-      
-              </div>
-              <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Flight Finder<i class="fas fa-times" aria-label="Close"></i></span>
-              <p class="info-content">Goal: A group project where we use AGILE software development.</p>
-              <p class="info-content">Tools: HTML, CSS, JavaScript, PHP, Cloud9, SQL</p>
-              <a class="btn btn-outline-primary" href="https://github.com/ianpara/airline-project" target="_blank">View Project</a>
-              </div>
-            </div>
-            
-      
-            
-            <div class="card border-dark carousel-cell">
-              <div class="card-image">
-              <img class="activator" src="assets/images/glad.PNG">
-              </div>
-              <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">GLADiator<i class="fas fa-info-circle" aria-label="More Info"></i></span>
-              <p class="card-text">Emotion detection web app.</p>
-      
-              </div>
-              <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">GLADiator<i class="fas fa-times" aria-label="Close"></i></span>
-              <p class="info-content">Goal: Create a web app that can predict a users mood from recording their voice.</p>
-              <p class="info-content">Tools: HTML, CSS, JavaScript, Python, SQL, PyCharm</p>
-              <a class="btn btn-outline-primary" href="https://github.com/ianpara/EmotionDetection/" target="_blank">View Project</a>
-              </div>
-            </div>
-            
-      
-          </div>
-      
-          </div>
-        </div>
-        </section>
-    
-
-    <!-- Contact -->
-    <section class="d-flex justify-content-center container section" id="contact">
-      <div class="contact">
-        <div class="content">
-          <header class="major">
-            <h2>Contact Me</h2>
-          </header>
-          <ul class="list-inline">
-            <li class="list-item"><i class="far fa-envelope fa-1x d-block d-sm-inline mr-2"></i><a href="mailto:ian.paraventi@gmail.com" target="_blank">ian.paraventi@gmail.com</a></li>
-          </ul>
-          <ul class="list-inline">
-            <li class="list-item"><i class="fab fa-github fa-1x d-block d-md-inline mr-2"></i><a href="https://github.com/ianpara" class="icon" target="_blank">My GitHub</a></li>
-          </ul>
-          <ul class="list-inline">
-            <li class="list-item"><i class="fab fa-linkedin-in fa-1x d-block d-md-inline mr-2"></i><a href="https://www.linkedin.com/in/ian-paraventi" class="icon" target="_blank">My LinkedIn</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-
-
-  </div>
-
-
-
-  <!-- Scripts -->
-
-
-  <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-  <!-- Bootstrap tooltips -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <!-- Materialize compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <!-- Flickity JavaScript -->
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-  <script src="assets/js/scrolly.min.js"></script>
-  <!-- custom JS -->
-  <script src="assets/js/custom.js"></script>
-=======
 <body>
 
 	<!-- preloader -->
@@ -401,20 +214,11 @@
 				<div class="timeline">
 					<div class="entry">
 						<div class="title">
-							<span>2019 - 2020</span>
+							<span>2019 - Present</span>
 						</div>
 						<div class="body">
 							<h4 class="mt-0">Web Developer / Technology Admin Specialist</h4>
 							<p>Part IT helpdesk and part web developer at Auto Credit Express</p>
-						</div>
-					</div>
-					<div class="entry">
-						<div class="title">
-							<span>2015 - 2020</span>
-						</div>
-						<div class="body">
-							<h4 class="mt-0">Bachelors in Information Technology</h4>
-							<p>Earned my bachelors of science degree at Oakland University</p>
 						</div>
 					</div>
 					<div class="entry">
@@ -424,6 +228,15 @@
 						<div class="body">
 							<h4 class="mt-0">Information Technology Intern</h4>
 							<p>Learned the basics of being an IT helpdesk at JVIS, a manufacturing company</p>
+						</div>
+					</div>
+					<div class="entry">
+						<div class="title">
+							<span>2015 - 2020</span>
+						</div>
+						<div class="body">
+							<h4 class="mt-0">Bachelors in Information Technology</h4>
+							<p>Earned my bachelors of science degree at Oakland University</p>
 						</div>
 					</div>
 					<span class="timeline-line"></span>
@@ -788,8 +601,17 @@
 
 	<!-- Go to top button -->
 	<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
->>>>>>> Stashed changes
 
+	<!-- SCRIPTS -->
+	<script src="assets/js/jquery-1.12.3.min.js"></script>
+	<script src="assets/js/jquery.easing.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.waypoints.min.js"></script>
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<script src="assets/js/infinite-scroll.min.js"></script>
+	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+	<script src="assets/js/custom.js"></script>
 
 </body>
 

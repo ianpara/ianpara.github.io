@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600|Source+Sans+Pro:300,400,700&display=swap');
+/*/////////////////// Resets/Defaults ////////////////////*/
+html {
+    box-sizing: border-box;
+}
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+}
+
+/* Reset margins and paddings on most elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+input,
+textarea,
+select,
+button {
+    color: inherit; 
+    font: inherit; 
+    letter-spacing: inherit; 
+}
+
+/*/////////////////// Fonts ////////////////////*/
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 80%;
+}
+
+
+@media (min-width: 768px) { 
+
+    * {
+        font-size: 90%;
+    }
+}
+
+@media (min-width: 992px) {
+        
+    * {
+        font-size: 100%;
+    }
+
+}
+
+/*/////////////////// Body ////////////////////*/
+body {
+    min-height: 100%;
+    background: #292929; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #292929 0%, #48445c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #292929 0%,#48445c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #292929 0%,#48445c 100%); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden; 
+}
+
+/*/////////////////// BG Shapes ////////////////////*/
+
+
+#top-rect {
+    position: absolute;
+    overflow: hidden;
+    width: 70em;
+    height: 100em;
+    background: linear-gradient(135deg, #085BA8 0%,rgba(0, 106, 204, 1) 100%);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    left: -5em;
+    bottom: -30em;
+
+    transform: rotate(-60deg);
+    transition: all 1s;
+}
+
+@media (min-width: 768px) { 
+
+    #top-rect {
+        width: 100em;
+        height: 200em;
+        left: 80em;
+        top: -97em;
+        transform: rotate(-60deg);
+        transition: top 2s, bottom 2s left 2s;
+    }
+}
+
+@media (min-width: 992px) {
+        
+    #top-rect {
+        width: 900.94px;
+        height: 1840.49px;
+        left: 60em;
+        top: -70em;
+        transform: rotate(-60deg); 
+        transition: top 2s, bottom 2s left 2s;
+    }
+}
+
+#bottom-rect {
+    position: absolute;
+    width: 60em;
+    height: 400em;
+    background: linear-gradient(135deg, #085BA8 0%,rgba(0, 106, 204, .1) 100%);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    top: 10em;
+    transform: rotate(-60deg);
+}
+
+@media (min-width: 768px) { 
+
+    #bottom-rect {
+        top: 10em;
+        transform: rotate(-60deg);
+    }
+}
+
+@media (min-width: 992px) {
+        
+    #bottom-rect {
+        top: -65em;
+        transform: rotate(-60deg); 
+    }
+}
+
+/*/////////////////// Content Styling ////////////////////*/
+
+section {
+    margin: 15em 0 20em 0;
+}
+
+.header {
+    font-size: 3.5em;
+    font-weight: 700;
+    /* margin: 2em 0 2em 0; */
+}
+
+.small-header {
+    font-size: 2.8em;
+    font-weight: 700;
+}
+
+
+.tiny-header {
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.content {
+    font-size: 1.4em;
+    font-weight: 300;
+    margin: 2em 0 2em 0;
+}
+
+.small-content {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: 1em 0 1em 0;
+
+}
+
+
+/*/////////////////// Forms ////////////////////*/
+input,
+textarea,
+select,
+button,
+.btn {
+    color: inherit; 
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: inherit; 
+}
+
+.input-group .btn {
+    color: white;
+    background-color: #006ACC;
+    border-radius: 0 3px 3px 0 !important;
+    font-size: 1em !important;
+}
+
+.input-group .btn:hover,
+.input-group .btn:active {
+    color: white;
+    background-color: #0054a3
+}
+
+.form-control {
+    border-radius: 3px 0 0 3px !important;
+}
+
+/*/////////////////// Hero ////////////////////*/
+.hero {
+    position: relative;
+    margin-bottom: 20em;
+    background-image: ;
+
+}
+.title {
+    color: white;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600;
+    font-size: 400%;
+    letter-spacing: 5px;
+}
+
+
+#football-player {
+    width: 40em;
+    height: auto;
+
+}
+
+/*/////////////////// Fetaures ////////////////////*/
+
+.features {
+    text-align: center;
+}
+
+/*/////////////////// Dashboard ////////////////////*/
+
+.features {
+    text-align: center;
+}
+
+.dash-img {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    transform: matrix(1, -0.27, 0, 0.97, 0, 0);
+}
+
+#dash1 {
+    top: -15em;
+
+}
+
+#dash2 {
+    top: -10em;
+    left: 5em;
+}
+
+#dash3 {
+    top: -5em;
+    left: 10em;
+}
+
+/*/////////////////// Chat ////////////////////*/
+
+.chat .btn {
+    color: #006ACC;
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+    font-weight: 400;
+
+}
+
+.chat .btn:hover {
+    color: #006ACC;
+    background-color: #e5e5e5;
+}
+
+.chat img {
+    width: 400px;
+    height: auto;
+}
+
+/*/////////////////// Showcase ////////////////////*/
+
+.show-img {
+    position: absolute;
+}
+#case1 {
+    width: 450px; 
+}
+
+#case2 {
+    width: 400px;
+    height: auto;
+    transform: rotate(-90deg);
+}
+
+.showcase .btn {
+    background-color: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.showcase .btn:hover {
+    background-color: white;
+    color: #292929;
+}
+
+.showcase .btn:active {
+    background-color: white;
+    color: #292929;
+}
+
+.feature-svg {
+    margin-right: 1em;
+}

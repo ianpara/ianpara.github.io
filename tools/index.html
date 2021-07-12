@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Home - Webtools</title>
+  <!-- favivon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=7k4LwR2Olv">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=7k4LwR2Olv">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=7k4LwR2Olv">
+  <link rel="manifest" href="/site.webmanifest?v=7k4LwR2Olv">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=7k4LwR2Olv" color="#5bbad5">
+  <link rel="shortcut icon" href="/favicon.ico?v=7k4LwR2Olv">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Bootstrap core CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Custom -->
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/45c0dc351a.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-size: 1rem !important;
+    }  
+  </style>
+
+</head>
+
+<body>
+
+  <a class="mode-btn" id="dark-mode" onclick="modeToggle()">
+    <i class="fas fa-lightbulb"></i>
+  </a>
+
+  <nav class="navbar navbar-dark">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/images/IP - white.png" width="30" height="30" alt="" loading="lazy">
+    </a>
+  </nav>
+  <br>
+  <main class="container" role="main">
+    <div class="">
+      <h1>Web Tools</h1>
+      <p class="lead">Tools to open a list of URL, find words in URLs, or create custom mass open URL rules.</p>
+      <p><strong>Some tools require pop-up's to work.</strong> Click this button to test if you have pop-ups disabled.</p>
+      <a class="btn" href="#" type="button" onclick="javscript:popUpTest()">Popup Test</a>
+      <br>
+      <br>
+      <p>In Chrome: If pop-ups are blocked you will see an icon in your address bar. Click that and select 'Always allow...'</p>
+      <p>In Firefox: If pop-ups are blocked you will see an alert telling you to enable pop-ups. In the top bar click 'Options' then 'Allow...'</p>
+      <p>In IE: If pop-ups are blocked you will see an alert telling you to enable pop-ups. In the bottom bar click 'Allow...'</p>
+    </div>
+
+    <div class="">
+      <table class="table table-bordered">
+        <thead class="">
+          <th scope="col">Tool</th>
+          <th scope="col">Description</th>
+          <th scope="col">Created On</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><a class="tool-link" href="mass-open.html">Mass Open</a></th>
+            <td>Input the base URL you want to goto and a list of path names (seperated by new lines) to open them all at once.</td>
+            <td>Jan 20, 2020</td>
+          </tr>
+          <tr>
+            <th scope="row"><a class="tool-link" href="custom-mass.html">Custom Mass Open</a></th>
+            <td>Mass open, but customize URL based on URL content.</td>
+            <td>Jan 20, 2020</td>
+          </tr>
+          <tr>
+            <th scope="row"><a class="tool-link" href="word-finder.html">Word Finder</a></th>
+            <td><i>Work in Progress</i> - Find a certain word in a list of URLs.</td>
+            <td>Jan 22, 2020</td>
+          </tr>
+          <tr>
+            <th scope="row"><a class="tool-link" href="../weather/index.html">Weather</a></th>
+            <td>Janky weather info.</td>
+            <td>Jan 24, 2020</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="/tools/tools.js"></script>
+  <script>
+  function modeToggle() {
+      localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ?'light' : 'dark'); 
+      if (localStorage.getItem('mode') === 'dark') {
+        document.querySelector('body').classList.add('dark')
+      } else {
+        document.querySelector('body').classList.remove('dark');
+      }
+
+}
+  </script>
+
+</body>
+
+</html>
