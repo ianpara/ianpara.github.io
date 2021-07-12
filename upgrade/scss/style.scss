@@ -1,26 +1,33 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&amp;display=swap&amp;subset=cyrillic-ext");
 
+//Change BS body font size
+$font-size-base: 1.6rem;
+//Change BS spacer
+$spacer: 1.6rem;
+
 // Colors
 //Light
 $primary: #FF5959;
 $secondary: #6666cc;
 $surface: #F6F7FF;
-$text: #888;
+$text: #4f4f4f;
 
 //Import Bootstrap SCSS
 @import "../bootstrap/scss/bootstrap";
 
 //Typography
-$opensans-font-stack: "Open Sans", sans-serif;
-$poppins-font-stack: "Poppins", sans-serif;
+$opensans-font-stack: "Open Sans",
+sans-serif;
+$poppins-font-stack: "Poppins",
+sans-serif;
 
 html {
-    font-size: 16px;
+    font-size: 62.5%;
 }
 
 body {
-    font: 1rem $opensans-font-stack;
+    font: 1.6rem $opensans-font-stack;
     color: $text;
     background-color: $surface;
 }
@@ -31,28 +38,70 @@ h3,
 h4,
 h5,
 h6 {
-  color: $black;
-  font-family: $poppins-font-stack;
-  font-weight: 700;
+    color: $black;
+    font-family: $poppins-font-stack;
+    font-weight: 700;
 }
+
+.text-black {
+    color: $black;
+}
+
+//Container 
+// Source mixin
+@mixin make-container($padding-x: $container-padding-x) {
+    width: 100%;
+    padding-right: $padding-x;
+    padding-left: $padding-x;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Usage
+.custom-container {
+    @include make-container(1.5rem);
+}
+
+
+//Buttons
+.btn {
+    font-family: $poppins-font-stack;
+    font-weight: 400;
+    border-radius: 100px;
+}
+
+.btn-lg {
+    padding: .5em 1em;
+}
+
+.btn span {
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.btn-primary {
+    color: $white;
+}
+
 
 //Helpers
 .push {
-    transform: translateX(295px);
+    transform: translateX(29.5rem);
     // touch-action: pan-y;
 }
 
-.shadow {
-    box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 20%);
+.section-shadow {
+    box-shadow: 0rem .6rem 1.5rem 0rem rgba(0, 0, 0, 0.2);
+
 }
 
- %dot {
-    content: "";
-    background-color: $primary;
-    border-radius: 50%;
+.dot::after {
+    content: ".";
+    color: $primary;
     display: inline-block;
-    margin-left: 5px;
- }
+    margin-left: .2rem;
+    font-size: 1em;
+}
 
 .slide-animate {
     transition: all 0.3s ease-in-out;
@@ -63,7 +112,7 @@ h6 {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    padding: 50px;
+    padding: 5rem;
 }
 
 .section.blue {
@@ -73,13 +122,21 @@ h6 {
 
 .section.white {
     @extend %section;
-    background-color: $surface;
+    background-color: $white;
 }
 
-.section h1 .dot:after {
-    @extend %dot;
-    height: 13px;
-    width: 13px;
+.section-gap {
+    margin-top: $spacer * 4;
+}
+
+.section-title::after {
+    content: "";
+    background: $primary;
+    border-radius: 30px;
+    display: block;
+    height: .5rem;
+    margin-top: 1.4rem;
+    width: 3rem;
 }
 
 //Mobile Nav Header
@@ -103,13 +160,13 @@ h6 {
             display: block;
             background: $white;
             border-radius: 10px;
-            height: 4px;
-            width: 25px;
+            height: .4rem;
+            width: 2.5rem;
         }
 
         span:nth-child(2) {
-            margin-top: 4px;
-            margin-bottom: 4px;
+            margin-top: .4rem;
+            margin-bottom: .4rem;
         }
     }
 }
@@ -120,14 +177,14 @@ h6 {
     border-radius: 20px;
     background-color: $secondary;
     color: #FFF;
-    min-height: 620px;
-    max-height: 620px;
-    width: 265px;
-    top: 1.5rem;
+    min-height: 62rem;
+    max-height: 62rem;
+    width: 26.5rem;
+    top: 2.4rem;
     overflow: hidden;
-    transform: translateX(-380px);
+    transform: translateX(-38rem);
 
-    &.collapse.show{
+    &.collapse.show {
         transform: translateX(0);
         transition: all 0.3s ease-in-out;
     }
@@ -140,7 +197,7 @@ h6 {
         font-size: .8rem;
     }
 
-    .nav .nav-link{
+    .nav .nav-link {
         color: $white;
         font-family: $poppins-font-stack;
         display: block;
@@ -148,58 +205,58 @@ h6 {
         transition: all 0.3s ease-in-out;
 
         &:hover {
-            margin-left: 5px;
+            margin-left: .5rem;
         }
     }
 
     // Dark mode toggle
     .toggle {
-        margin-top: 10px;
+        margin-top: 1rem;
 
         label {
             position: relative;
             display: block;
-            width: 60px;
-            height: 30px;
+            width: 6rem;
+            height: 3rem;
             border-radius: 100px;
             background-color: #000839;
             overflow: hidden;
             cursor: pointer;
-    
+
             &:before,
             &:after {
-              display: block;
-              position: absolute;
-              content: "";
-              width: 22px;
-              height: 22px;
-              border-radius: 50%;
-              top: 4px;
-              left: 6px;
-              transition: 0.5s ease;
+                display: block;
+                position: absolute;
+                content: "";
+                width: 2.2rem;
+                height: 2.2rem;
+                border-radius: 50%;
+                top: .4rem;
+                left: .6rem;
+                transition: 0.5s ease;
             }
-    
+
             &:before {
                 background-color: #ffa41b;
             }
-              
+
             &:after {
                 background-color: #000839;
-                left: -30px;
+                left: -3rem;
                 transform: scale(0.00001);
             }
-          }
-          
-          input[type="checkbox"] {
+        }
+
+        input[type="checkbox"] {
             display: none;
-    
+
             &:checked+label:before {
                 background-color: #fff;
-                transform: translateX(26px);
+                transform: translateX(2.6rem);
             }
-              
+
             &:checked+label:after {
-            transform: translateX(53px) scale(1);
+                transform: translateX(5.3rem) scale(1);
             }
         }
     }
@@ -209,23 +266,80 @@ h6 {
         background: $primary;
         border-radius: 50%;
         display: block;
-        height: 2em;
-        width: 2em;
-        line-height: 1.8rem;
+        height: 3rem;
+        width: 3rem;
+        line-height: 2.7rem;
         text-align: center;
     }
 
-    span.dot::after {
-        @extend %dot; 
-        height: 6px;
-        width: 6px;   
+}
+
+//Hero section
+.hero-title {
+    @include font-size(7.5rem);
+}
+
+//Skills
+.skill-items li::after {
+    content: " | ";
+    font-weight: 700;
+    color: $primary;
+}
+
+.skill-items li:last-child:after {
+    content: "";
+}
+
+//Experience
+//Credit style to https://codepen.io/TajShireen/pen/JjGvVzg
+.timeline {
+    border-radius: 12px;
+    position: relative;
+
+    li {
+        padding-bottom: 1.5rem;
+        border-left: 1px solid rgba($primary, .5);
+        position: relative;
+        padding-left: 2rem;
+        margin-left: 1rem;
+
+        &:last-child {
+            border: 0px;
+            padding-bottom: 0;
+        }
+
+        &:before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: $white;
+            border: 1px solid $primary;
+            border-radius: 50%;
+            position: absolute;
+            left: -.8rem;
+            top: 0px;
+        }
     }
-    
-}    
 
-//About section
-.intro-title {
-    @include font-size(6rem);
-  }
-  
+    .date {
+        font-size: 1.2rem;
+    }
 
+    .title {
+        font-family: $poppins-font-stack;
+        font-weight: 500;
+    }
+
+    p {
+        //line-height: 1.5;
+        margin-top: 0.4rem;
+    }
+
+}
+
+//Contact
+.contact-info span {
+    font-size: 2rem;
+    color: $primary;
+    // float: left;
+}
