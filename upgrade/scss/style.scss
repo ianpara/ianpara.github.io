@@ -5,16 +5,17 @@
 $font-size-base: 1.6rem;
 //Change BS spacer
 $spacer: 1.6rem;
+//Change modal animation
+$modal-fade-transform: scale(.8);
 
 // Colors
-//Light
 $primary: #FF5959;
 $secondary: #6666cc;
-$surface: #F6F7FF;
-$text: #4f4f4f;
 
 //Import Bootstrap SCSS
 @import "../bootstrap/scss/bootstrap";
+//Import colors from colors.scss
+@import 'colors';
 
 //Typography
 $opensans-font-stack: "Open Sans",
@@ -28,8 +29,9 @@ html {
 
 body {
     font: 1.6rem $opensans-font-stack;
-    color: $text;
-    background-color: $surface;
+    @include color-assign(color, text);
+    @include color-assign(background-color, surface);
+    transition: background-color 0.2s ease;
 }
 
 h1,
@@ -38,23 +40,19 @@ h3,
 h4,
 h5,
 h6 {
-    color: $black;
+    @include color-assign(color, heading);
     font-family: $poppins-font-stack;
     font-weight: 700;
 }
 
 .text-black {
-    color: $black;
+    @include color-assign(color, heading);
 }
 
 //Container 
-// Source mixin
-@mixin make-container($padding-x: $container-padding-x) {
-    width: 100%;
-    padding-right: $padding-x;
-    padding-left: $padding-x;
-    margin-right: auto;
-    margin-left: auto;
+.container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
 }
 
 // Usage
@@ -68,10 +66,7 @@ h6 {
     font-family: $poppins-font-stack;
     font-weight: 400;
     border-radius: 100px;
-}
-
-.btn-lg {
-    padding: .5em 1em;
+    padding: .8em 1.2em;
 }
 
 .btn span {
@@ -104,7 +99,7 @@ h6 {
 }
 
 .slide-animate {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out, color .1ms;
 }
 
 //Sections
@@ -115,14 +110,14 @@ h6 {
     padding: 5rem;
 }
 
-.section.blue {
+.section.purple {
     @extend %section;
-    background-color: $secondary;
+    @include color-assign(background-color, secondary);
 }
 
 .section.white {
     @extend %section;
-    background-color: $white;
+    @include color-assign(background-color, background);
 }
 
 .section-gap {
@@ -131,7 +126,7 @@ h6 {
 
 .section-title::after {
     content: "";
-    background: $primary;
+    background-color: $primary;
     border-radius: 30px;
     display: block;
     height: .5rem;
@@ -141,16 +136,9 @@ h6 {
 
 //Mobile Nav Header
 .mobile-nav {
-    background: $secondary;
+    @include color-assign(background-color, secondary);
     border-radius: 20px;
-    // -webkit-transform: translateX(0);
-    // -moz-transform: translateX(0);
-    // -ms-transform: translateX(0);
-    // -o-transform: translateX(0);
-    // transform: translateX(0);
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out, color .1ms;
 
     .navbar-toggler {
         outline: none;
@@ -175,7 +163,7 @@ h6 {
 .side-nav {
     position: fixed;
     border-radius: 20px;
-    background-color: $secondary;
+    @include color-assign(background-color, secondary);
     color: #FFF;
     min-height: 62rem;
     max-height: 62rem;
@@ -186,7 +174,7 @@ h6 {
 
     &.collapse.show {
         transform: translateX(0);
-        transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out, color .1ms;
     }
 
     .btn-close {
@@ -194,7 +182,7 @@ h6 {
     }
 
     .site-slogan {
-        font-size: .8rem;
+        font-size: 1.2rem;
     }
 
     .nav .nav-link {
@@ -263,7 +251,7 @@ h6 {
 
     .social-icon {
         color: $white;
-        background: $primary;
+        background-color: $primary;
         border-radius: 50%;
         display: block;
         height: 3rem;
@@ -273,6 +261,26 @@ h6 {
     }
 
 }
+
+@include media-breakpoint-up(lg) {
+    .side-nav {
+        top: 4.8rem;
+        transform: translateX(0);
+    }
+
+    .main-content {
+        float: right;
+        width: 63.5rem;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+
+    .main-content {
+        width: 77%;
+    }
+}
+
 
 //Hero section
 .hero-title {
@@ -312,8 +320,8 @@ h6 {
             content: '';
             width: 15px;
             height: 15px;
-            background: $white;
-            border: 1px solid $primary;
+            @include color-assign(background-color, background);
+            @include color-assign(border, primary, '1px solid here');
             border-radius: 50%;
             position: absolute;
             left: -.8rem;
@@ -335,6 +343,135 @@ h6 {
         margin-top: 0.4rem;
     }
 
+}
+
+//Works
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px .6rem 1.5rem 0px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out, color .1ms;
+
+    .thumb {
+
+
+        img {
+            transform: scale(1);
+            transition: all 0.3s ease-in-out;
+            object-fit: cover;
+            /* height: 183px;
+            width: 244px; */
+        }
+    }
+
+    .details {
+        color: $white;
+        position: absolute;
+        padding: 0 2.5rem;
+        top: 2.5rem;
+        width: 100%;
+        z-index: 1;
+
+        .title {
+            color: $white;
+            margin: 0 0 .4rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+        }
+
+        .info {
+            font-size: 1.4rem;
+            opacity: 0;
+            display: block;
+            transform: translateY(4rem);
+            transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+        }
+    }
+
+    .plus-icon {
+        color: $primary;
+        background: #FFF;
+        border-radius: 100%;
+        position: absolute;
+        left: 2.5rem;
+        bottom: 2.5rem;
+        opacity: 0;
+        line-height: 3rem;
+        text-align: center;
+        height: 3rem;
+        width: 3rem;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .mask {
+        background: $primary;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+
+        .mask {
+            opacity: 0.9;
+        }
+
+        img {
+            transform: scale(1.1);
+        }
+
+        .details .title,
+        .details .info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .plus-icon {
+            opacity: 1;
+        }
+    }
+
+}
+
+.portfolio-modal {
+
+    .modal-dialog .modal-content {
+        padding: 5rem;
+
+        .portfolio-info {
+            font-size: 1.4rem;
+
+            span {
+                color: $primary;
+            }
+        }
+
+        img {
+            box-shadow: 0px .6rem 1.5rem 0px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-content {
+            font-size: 1.4rem;
+
+            p {
+                margin-bottom: 1.5rem;
+                line-height: 1.5;
+            }
+
+            .strong {
+                color: $primary;
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 //Contact
