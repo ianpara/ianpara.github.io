@@ -32,6 +32,7 @@ body {
     @include color-assign(color, text);
     @include color-assign(background-color, surface);
     transition: background-color 0.2s ease;
+    overflow-x: hidden;
 }
 
 h1,
@@ -195,6 +196,17 @@ h6 {
         &:hover {
             margin-left: .5rem;
         }
+
+        &.active::before {
+            content: "";
+            background: $primary;
+            display: block;
+            height: 1.8rem;
+            left: -2.4rem;
+            top: .7rem;
+            position: absolute;
+            width: .3rem;
+        }
     }
 
     // Dark mode toggle
@@ -284,7 +296,7 @@ h6 {
 
 //Hero section
 .hero-title {
-    @include font-size(7.5rem);
+    @include font-size(6rem);
 }
 
 //Skills
@@ -478,5 +490,4 @@ h6 {
 .contact-info span {
     font-size: 2rem;
     color: $primary;
-    // float: left;
 }

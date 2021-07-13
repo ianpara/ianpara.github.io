@@ -11728,6 +11728,7 @@ body {
   background-color: var(--color-surface);
   -webkit-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease;
+  overflow-x: hidden;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -11895,6 +11896,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-left: .5rem;
 }
 
+.side-nav .nav .nav-link.active::before {
+  content: "";
+  background: #FF5959;
+  display: block;
+  height: 1.8rem;
+  left: -2.4rem;
+  top: .7rem;
+  position: absolute;
+  width: .3rem;
+}
+
 .side-nav .toggle {
   margin-top: 1rem;
 }
@@ -11979,12 +11991,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .hero-title {
-  font-size: calc(1.875rem + 7.5vw);
+  font-size: calc(1.725rem + 5.7vw);
 }
 
 @media (min-width: 1200px) {
   .hero-title {
-    font-size: 7.5rem;
+    font-size: 6rem;
   }
 }
 

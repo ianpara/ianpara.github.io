@@ -28,7 +28,7 @@
     <![endif]-->
 
 </head>
-<body>
+<body class="position-relative" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="50" >
     <!-- preloader -->
 	<div id="preloader">
 		<div class="outer">
@@ -46,17 +46,17 @@
 			<div class="d-flex justify-content-end">
 				<button type="button" class="btn-close btn-close-white mt-3 me-3 d-lg-none" aria-label="Close navigation" data-bs-toggle="collapse" data-bs-target="#sideNav" aria-controls="sideNav"></button>
 			</div>
-			<div class="d-flex align-items-start flex-column position-absolute w-100 p-4 top-0 bottom-0 start-0 end-0">
+			<div class="d-flex align-items-start flex-column position-absolute w-100 p-4 top-0 bottom-0 start-0 end-0" id="navbar">
 				<span class="display-5 lh-1 text-white fw-bold dot mt-3">Ian Paraventi</span>
 				<span class="site-slogan lh-lg text-uppercase">Web Developer // Tech Admin</span>
 
 				<!-- navigation menu -->
 				<nav class="nav flex-column mt-5">
-					<a class="nav-link" href="#about"><span class="icon-user me-4"></span>About</a>
-					<a class="nav-link" href="#skills"><span class="icon-bulb me-4"></span>Skills</a>
-					<a class="nav-link" href="#resume"><span class="icon-graduation me-4"></span>Resume</a>
-					<a class="nav-link" href="#works"><span class="icon-grid me-4"></span>Works</a>
-					<a class="nav-link" href="#contact"><span class="icon-phone me-4"></span>Contact</a>		
+					<div class="position-relative"><a class="nav-link" href="#about"><span class="icon-user me-4"></span>About</a></div>
+					<div class="position-relative"><a class="nav-link" href="#skills"><span class="icon-bulb me-4"></span>Skills</a></div>
+					<div class="position-relative"><a class="nav-link" href="#resume"><span class="icon-graduation me-4"></span>Resume</a></div>
+					<div class="position-relative"><a class="nav-link" href="#works"><span class="icon-grid me-4"></span>Works</a></div>
+					<div class="position-relative"><a class="nav-link" href="#contact"><span class="icon-phone me-4"></span>Contact</a></div>		
 				</nav>
 
 				<!-- light/dark toggle -->
@@ -113,18 +113,18 @@
 			<!-- start section hero -->
 			<div class="section section-shadow purple mt-lg-5 mt-4" id="about">
 				<div class="row">
-					<div class="col-md-3 col-8 me-lg-auto ms-lg-0  mx-m=-auto">
+					<div class="col-lg-3 col-8 me-lg-auto ms-lg-0 mx-auto">
 						<img class="me img-fluid rounded-circle" src="/assets/images/headshot.jpg" alt="picture of me" />
 					</div>
-					<div class="col-md-8 col-12">
+					<div class="col-lg-9 col-12">
 						<h1 class="hero-title dot text-white mt-4 mt-md-0 mb-4">Hi I'm Ian</h2>
 						<p class="mb-5 text-white lh-base">A graduate of Oakland University with a Bachelors of Science in
 							Information Technology. I have loved computers since I was a kid, so I decided to make a career out of my passion.
 							I started programming in high school and never looked back. I am always ready to tackle new
 							problems and expand my knowledge.</p>
-						<div class="d-grid gap-2 d-md-block">
+						<div class="d-grid gap-2 d-lg-block">
 							<a href="/assets/docs/resume-developer.pdf" target="_blank" role="button"
-							class="btn btn-primary me-lg-3"><span class="icon-cloud-download"></span>View
+							class="btn btn-primary"><span class="icon-cloud-download"></span>View
 							Resume</a>
 							<a href="#contact" class="btn btn-outline-light" role="button"><span class="icon-envelope"></span>Contact
 								me</a>
@@ -247,7 +247,7 @@
 					<div class="col-xl-4 col-sm-6 col-12 mb-5" data-bs-toggle="modal" data-bs-target="#blogModal">
 						<div class="portfolio-item">
 							<div class="details">
-								<h4 class="title">Blogpad Wordpress Template</h4>
+								<h4 class="title">Wordpress Template</h4>
 								<span class="info">Converted a HTML design to a WordPress template</span>
 							</div>
 							<span class="plus-icon">+</span>
@@ -340,11 +340,11 @@
 			<!-- start section works -->
 
 			<!-- start section contact -->
-			<div class="section section-shadow white section-gap" id="contact">
+			<div class="section section-shadow white section-gap" id="contact" data-bs-offset="100">
 				<h2 class="section-title">Get in touch</h2>
 				<div class="row justify-content-around mt-5">
 					<!-- contact info -->
-					<div class="col-md-3 col-12 mb-4 mb-md-0 contact-info">
+					<div class="col-lg-3 col-12 mb-4 mb-lg-0 contact-info">
 						<div class="d-inline-flex">
 							<span class="icon-phone"></span>
 							<div class="details ms-3">
@@ -353,7 +353,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 col-12 mb-4 mb-md-0 contact-info">
+					<div class="col-lg-3 col-12 mb-4 mb-lg-0 contact-info">
 						<div class="d-inline-flex">
 							<span class="icon-envelope"></span>
 							<div class="details ms-3">
@@ -362,7 +362,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 col-12 mb-4 mb-md-0 contact-info">
+					<div class="col-lg-3 col-12 mb-4 mb-lg-0 contact-info">
 						<div class="d-inline-flex">
 							<span class="icon-location-pin"></span>
 							<div class="details ms-3">
