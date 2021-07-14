@@ -11462,13 +11462,13 @@ a:focus .portfolio-item .details .info {
 }
 
 .return-to-top {
+  display: none;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
   background: rgba(0, 0, 0, 0.3);
   width: 5rem;
   height: 5rem;
-  display: block;
   text-decoration: none;
   border-radius: 50%;
   z-index: 4;
