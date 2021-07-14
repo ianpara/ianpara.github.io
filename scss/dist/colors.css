@@ -1,0 +1,17 @@
+:root[color-mode=light] {
+  --color-background:#fff;
+  --color-primary:#FF5959;
+  --color-secondary:#6666cc;
+  --color-surface:#F6F7FF;
+  --color-text:#4f4f4f;
+  --color-heading:#000;
+}
+
+:root[color-mode=dark] {
+  --color-surface:#333;
+  --color-primary:#FF5959;
+  --color-secondary:#4747c2;
+  --color-background:#404040;
+  --color-text:#e0e0e0;
+  --color-heading:#fff;
+}
