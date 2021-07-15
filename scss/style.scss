@@ -550,11 +550,13 @@ a:focus .portfolio-item {
             margin-top: 0;
 
             .title {
+                color: $white;
                 opacity: 0;
                 transform: translateY(3rem);
             }
 
             .info {
+                color: $white;
                 opacity: 0;
                 transform: translateY(4rem);
 

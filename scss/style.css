@@ -12245,11 +12245,13 @@ a:focus .portfolio-item img {
     margin-top: 0;
   }
   .portfolio-item .details .title {
+    color: #fff;
     opacity: 0;
     -webkit-transform: translateY(3rem);
             transform: translateY(3rem);
   }
   .portfolio-item .details .info {
+    color: #fff;
     opacity: 0;
     -webkit-transform: translateY(4rem);
             transform: translateY(4rem);
