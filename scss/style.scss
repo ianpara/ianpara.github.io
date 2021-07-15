@@ -150,7 +150,7 @@ h6 {
     }
 }
 
-#works [type="button"] {
+.portfolio-outer [type="button"] {
     -webkit-appearance: none;
     -webkit-border-radius: 0;
 }
@@ -442,11 +442,11 @@ h6 {
 }
 
 //Works
-#works a:nth-child(odd) {
+.portfolio-outer a:nth-child(odd) {
     padding-right: 1rem;
 }
 
-#works a:nth-child(even) {
+.portfolio-outer a:nth-child(even) {
     padding-left: 1rem;
 }
 

@@ -11838,7 +11838,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   vertical-align: middle;
 }
 
-#works [type="button"] {
+.portfolio-outer [type="button"] {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
 }
@@ -12131,11 +12131,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 0.4rem;
 }
 
-#works a:nth-child(odd) {
+.portfolio-outer a:nth-child(odd) {
   padding-right: 1rem;
 }
 
-#works a:nth-child(even) {
+.portfolio-outer a:nth-child(even) {
   padding-left: 1rem;
 }
 
