@@ -150,6 +150,11 @@ h6 {
     }
 }
 
+#works [type="button"] {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
 //Helpers
 .push {
     transform: translateX(29.5rem);

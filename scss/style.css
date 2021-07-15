@@ -11838,6 +11838,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   vertical-align: middle;
 }
 
+#works [type="button"] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
 .push {
   -webkit-transform: translateX(29.5rem);
           transform: translateX(29.5rem);

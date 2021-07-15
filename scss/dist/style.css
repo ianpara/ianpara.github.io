@@ -11053,6 +11053,11 @@ h6,
   vertical-align: middle;
 }
 
+#works [type=button] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
 .push {
   transform: translateX(29.5rem);
 }
