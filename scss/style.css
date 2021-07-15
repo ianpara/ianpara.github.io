@@ -11942,8 +11942,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   width: 26.5rem;
   top: 2.4rem;
   overflow: hidden;
-  -webkit-transform: translateX(-38rem);
-          transform: translateX(-38rem);
+  -webkit-transform: translateX(-40rem);
+          transform: translateX(-40rem);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }

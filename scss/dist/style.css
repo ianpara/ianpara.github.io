@@ -11146,7 +11146,7 @@ h6,
   width: 26.5rem;
   top: 2.4rem;
   overflow: hidden;
-  transform: translateX(-38rem);
+  transform: translateX(-40rem);
   transition: all 0.3s ease-in-out;
 }
 .side-nav.show {
