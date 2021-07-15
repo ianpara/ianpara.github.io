@@ -11368,9 +11368,6 @@ h6,
   width: 100%;
   transition: all 0.3s ease-in-out;
 }
-.portfolio-item:hover img {
-  transform: scale(1.1);
-}
 
 a:focus .portfolio-item img {
   transform: scale(1.1);
@@ -11416,6 +11413,9 @@ a:focus .portfolio-item img {
   }
   .portfolio-item:hover .plus-icon, .portfolio-item:focus .plus-icon {
     opacity: 1;
+  }
+  .portfolio-item:hover img, .portfolio-item:focus img {
+    transform: scale(1.1);
   }
 
   a:focus .portfolio-item .mask {
